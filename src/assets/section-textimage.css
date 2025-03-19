@@ -1,0 +1,15 @@
+section.textimage .container:not(.slider) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px 100px;
+}
+
+.textimage-content{
+    flex: 1 1 450px;
+}
+
+.textimage-content .button{
+    margin-top: 50px;
+}

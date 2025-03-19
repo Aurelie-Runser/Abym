@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--c-white);
+    transition: all .2s ease-in-out;
+}
+
+*::selection{
+    background: var(--c-primary-light);
+    color: var(--c-primary);
+}
+
+body{
+    background: #02506C;
+}
+
+
+section{
+    position: relative;
+    padding: 100px 0;
+}
+
+.container{
+    width: 90vw;
+    max-width: var(--mw);
+    margin: auto;
+}
+
+.content-image{
+    flex: 1 1 450px;
+    aspect-ratio: 16/9;
+    background: grey;
+}
+
+h2{
+    font-family: var(--ff-title);
+    font-size: var(--fs-xl);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+p, span{
+    font-family: var(--ff-text);
+    font-weight: 300;
+    font-size: var(--fs-md);
+    line-height: 150%;
+    margin-bottom: 25px;
+}
+
+.button{
+    display: block;
+    width: fit-content;
+    padding: 20px 25px;
+    background: var(--c-primary-dark);
+    font-family: var(--ff-title);
+    font-size: var(--fs-lg);
+    text-transform: uppercase;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover{
+    color: var(--c-primary);
+    background: var(--c-primary-light);
+}
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+			clip-path: inset(50%) !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}

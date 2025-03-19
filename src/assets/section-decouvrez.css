@@ -1,0 +1,23 @@
+section.decouvrez{
+    background: var(--c-primary-dark);
+}
+
+section.medias{
+    background: transparent;
+}
+
+.decouvrez-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px 100px;
+}
+
+.decouvrez-texts{
+    flex: 1 1 450px;
+}
+
+.decouvrez-texts .medias-list{
+    margin: 50px 0;
+}
