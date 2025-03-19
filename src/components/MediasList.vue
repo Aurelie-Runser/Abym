@@ -4,7 +4,7 @@ import ThreadIcon from "@/components/icons/ThreadIcon.vue";
 import BlueskyIcon from "@/components/icons/BlueskyIcon.vue";
 
 defineProps<{
-  isColumn: boolean;
+  isColumn?: boolean;
 }>();
 </script>
 

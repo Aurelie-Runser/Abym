@@ -4,8 +4,8 @@ import LogoBig from "@/components/icons/LogoBig.vue"
 defineProps<{
   title?: string;
   text?: string;
-  isHome: boolean;
-  isError: boolean;
+  isHome?: boolean;
+  isError?: boolean;
 }>();
 </script>
 
