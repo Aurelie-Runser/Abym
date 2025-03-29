@@ -22,6 +22,7 @@ import {
     toRefs,
     onMounted,
     onBeforeUnmount,
+    PropType
 } from "vue";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -44,8 +45,8 @@ const props = defineProps({
 
 const proprietes = toRefs(props)
 
-const canvasContainer = ref<HTMLCanvasElement | OffscreenCanvas | undefined>(null);
-const canvas = ref<HTMLCanvasElement | OffscreenCanvas | undefined>(null);
+const canvasContainer = ref<HTMLCanvasElement | OffscreenCanvas | undefined>(undefined);
+const canvas = ref<HTMLCanvasElement | OffscreenCanvas | undefined>(undefined);
 
 let controls: OrbitControls;
 let scene: THREE.Scene;
@@ -83,7 +84,13 @@ const initScene = () => {
 
         scene.add(model);
 
-        camera.position.set(...proprietes.cameraPosition.value);
+        if (Array.isArray(proprietes.cameraPosition.value)) {
+            camera.position.set(...proprietes.cameraPosition.value);
+        }
+        else {
+            camera.position.set(0, 0, 0);
+        }
+        
         camera.lookAt(0, 0, 0);
         controls.target.set(0, 0, 0);
     }, onProgress, onError);
@@ -122,7 +129,7 @@ const onProgress = function (data: ProgressEvent) {
     }
 };
   
-const onError = function (data: ProgressEvent) {
+const onError = function (data: unknown) {
     console.error(data);
 };
   
