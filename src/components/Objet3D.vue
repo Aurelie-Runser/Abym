@@ -28,15 +28,24 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import * as THREE from "three";
 
 const props = defineProps({
-    model : String,
-    cameraPosition : Array<number>,
-    amplitude : Number,
-})
+  model: {
+    type: String,
+    required: true,
+  },
+  cameraPosition: {
+    type: Array as PropType<[number, number, number]>,
+    required: true,
+  },
+  amplitude: {
+    type: Number,
+    required: true,
+  },
+});
 
 const proprietes = toRefs(props)
 
-const canvasContainer = ref<HTMLDivElement | null>(null);
-const canvas = ref<HTMLCanvasElement | null>(null);
+const canvasContainer = ref<HTMLCanvasElement | OffscreenCanvas | undefined>(null);
+const canvas = ref<HTMLCanvasElement | OffscreenCanvas | undefined>(null);
 
 let controls: OrbitControls;
 let scene: THREE.Scene;
@@ -47,8 +56,8 @@ const animationId: null = null;
 
 const initScene = () => {
     scene = new THREE.Scene();
-    const width = canvasContainer.value.clientWidth!;
-    const height = canvasContainer.value.clientHeight!;
+    const width = canvasContainer.value!.clientWidth;
+    const height = canvasContainer.value!.clientHeight;
 
     // Créer la caméra avec un champ de vision de 50
     camera = new THREE.PerspectiveCamera(50, width/height, 0.1, 1000);
@@ -106,14 +115,14 @@ const animate = () => {
 };
 
   
-const onProgress = function (data) {
+const onProgress = function (data: ProgressEvent) {
     if (data.lengthComputable) {
       const percentComplete = (data.loaded / data.total) * 100;
       console.log(Math.round(percentComplete, 2) + "% téléchargé");
     }
 };
   
-const onError = function (data) {
+const onError = function (data: ProgressEvent) {
     console.error(data);
 };
   
