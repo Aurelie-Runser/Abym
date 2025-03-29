@@ -1,36 +1,50 @@
 <script setup lang="ts">
+import SVGFooter from "@/components/SVGFooter.vue";
 import MediasList from "@/components/MediasList.vue";
 </script>
 
 <template>
   <footer class="main-footer ripples-anime">
-    <div class="container footer-container">
-      <div class="footer-nav">
-        <p class="footer-title">L'encyclopédie</p>
-
-        <RouterLink class="footer-link" to="/encyclopedie">Découvrir l'encyclopédie ></RouterLink>
-      </div>
-
-      <div class="footer-contact">
-        <p class="footer-title">Nous contacter</p>
-
-        <RouterLink class="footer-link" to="/contact">Nous contacter ></RouterLink>
-
-        <p>Découvrir nos réseaux sociaux pour en savoir plus sur l'avancement du jeu.</p>
-
-        <MediasList/>
+    <div class="footer-svg">
+      <SVGFooter/>
+    </div>
+    <div class="footer-container">
+      <div class="container">
+        <div class="footer-nav">
+          <p class="footer-title">L'encyclopédie</p>
+  
+          <RouterLink class="footer-link" to="/encyclopedie">Découvrir l'encyclopédie ></RouterLink>
+        </div>
+  
+        <div class="footer-contact">
+          <p class="footer-title">Nous contacter</p>
+  
+          <RouterLink class="footer-link" to="/contact">Nous contacter ></RouterLink>
+  
+          <p>Découvrir nos réseaux sociaux pour en savoir plus sur l'avancement du jeu.</p>
+  
+          <MediasList/>
+        </div>
       </div>
     </div>
   </footer>
 </template>
 
 <style>
-.main-footer {
-  background: var(--c-primary-dark);
-  padding: 90px 0;
+.footer-svg svg{
+  position: relative;
+  z-index: 0;
+  translate: 0 10px;
 }
 
 .footer-container {
+  position: relative;
+  z-index: 1;
+  background: var(--c-primary-dark);
+  padding-bottom: 90px;
+}
+
+.footer-container .container{
   display: flex;
   flex-wrap: wrap;
   gap: 50px 100px;
