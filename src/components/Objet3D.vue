@@ -35,27 +35,34 @@ const props = defineProps({
 
 const proprietes = toRefs(props)
 
-const canvasContainer = ref(null);
-const canvas = ref(null);
-let controls, scene, camera, renderer, animationId = null;
-let time = 0;
+const canvasContainer = ref<HTMLDivElement | null>(null);
+const canvas = ref<HTMLCanvasElement | null>(null);
+
+let controls: OrbitControls;
+let scene: THREE.Scene;
+let camera: THREE.PerspectiveCamera;
+let renderer: THREE.WebGLRenderer;
+let time: number = 0;
+const animationId: null = null;
 
 const initScene = () => {
     scene = new THREE.Scene();
-    const width = canvasContainer.value.clientWidth;
-    const height = canvasContainer.value.clientHeight;
+    const width = canvasContainer.value.clientWidth!;
+    const height = canvasContainer.value.clientHeight!;
+
+    // Créer la caméra avec un champ de vision de 50
     camera = new THREE.PerspectiveCamera(50, width/height, 0.1, 1000);
+
+    // Rendu WebGL
     renderer = new THREE.WebGLRenderer({ canvas: canvas.value });
     renderer.setSize(width, height);
+    renderer.setClearColor('#02506C', 0);
+
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enableRotate = false;
     controls.enableZoom = false;
     controls.enablePan = false;
     
-    renderer = new THREE.WebGLRenderer({ canvas: canvas.value });
-    renderer.setSize(width, height);
-    renderer.setClearColor('#02506C', 0);
-
     const loader = new GLTFLoader();
     loader.load(proprietes.model.value, (gltf) => {
         const model = gltf.scene;
@@ -73,11 +80,11 @@ const initScene = () => {
     }, onProgress, onError);
 
     // Ajoutez une lumière ambiante pour éclairer toute la scène
-    const ambientLight = new THREE.AmbientLight('#70C5D4', 0.4);
+    const ambientLight = new THREE.AmbientLight('#70C5D4', 0.7);
     scene.add(ambientLight);
 
     // Ajoutez une lumière directionnelle pour simuler la lumière du soleil
-    const directionalLight = new THREE.DirectionalLight('#e9e9e9', 0.8);
+    const directionalLight = new THREE.DirectionalLight('#e9e9e9', 0.7);
     directionalLight.position.set(0, 1, 1); // positionnez la lumière vers le haut et en avant
     scene.add(directionalLight);
 
@@ -90,7 +97,8 @@ const animate = () => {
 
     // Applique un mouvement de haut en bas
     camera.position.y = Math.sin(time) * proprietes.amplitude.value;
-    // // Appel récursif pour continuer l'animation
+    
+    // Appel récursif pour continuer l'animation
     requestAnimationFrame(animate);
 
     // Rendu de la scène

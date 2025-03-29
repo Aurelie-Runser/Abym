@@ -27,12 +27,13 @@ import MediasList from "@/components/MediasList.vue";
         </div>
 
         <div class="content-image">
-          <Objet3D v-bind="{
-            model: '/models/fish.glb',
-            cameraPosition: [4, 0, 2],
-            amplitude: 0.1
-        }"
-        />
+          <Objet3D
+            v-bind="{
+              model: '/models/fish.glb',
+              cameraPosition: [4, 0, 2],
+              amplitude: 0.1,
+            }"
+          />
         </div>
       </div>
     </section>
@@ -56,11 +57,12 @@ import MediasList from "@/components/MediasList.vue";
           </div>
 
           <div class="content-image">
-            <Objet3D v-bind="{
-              model: '/models/fish-2.glb',
-              cameraPosition: [0.4, 0, 0],
-              amplitude: 0.005
-            }"
+            <Objet3D
+              v-bind="{
+                model: '/models/fish-2.glb',
+                cameraPosition: [0.4, 0, 0],
+                amplitude: 0.005,
+              }"
             />
           </div>
         </div>
@@ -70,11 +72,12 @@ import MediasList from "@/components/MediasList.vue";
     <section class="textimage">
       <div class="container">
         <div class="content-image">
-          <Objet3D v-bind="{
-            model: '/models/fish-1.glb',
-            cameraPosition: [0, 0, -1],
-            amplitude: 0.02
-          }"
+          <Objet3D
+            v-bind="{
+              model: '/models/coral.glb',
+              cameraPosition: [4, 0, 3],
+              amplitude: 0,
+            }"
           />
         </div>
 
@@ -102,12 +105,20 @@ import MediasList from "@/components/MediasList.vue";
               exclusives et ne rien manquer des dernières actualités&nbsp;!
             </p>
 
-            <MediasList/>
+            <MediasList />
 
             <a class="button" href="/contact">Nous contacter</a>
           </div>
 
-          <div class="content-image"></div>
+          <div class="content-image">
+            <Objet3D
+              v-bind="{
+                model: '/models/fish-1.glb',
+                cameraPosition: [-450, 0, 300],
+                amplitude: 5,
+              }"
+            />
+          </div>
         </div>
       </div>
     </section>
