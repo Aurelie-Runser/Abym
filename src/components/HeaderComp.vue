@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import Logotext from "@/components/icons/LogoText.vue"
+<script setup>
+import Logotext from "@/components/icons/LogoText.vue";
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import Logotext from "@/components/icons/LogoText.vue"
       <ul>
         <li>
           <RouterLink to="/">
-            <Logotext/>
+            <Logotext />
             <span class="sr-only">Accueil</span>
           </RouterLink>
         </li>

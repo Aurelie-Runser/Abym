@@ -1,11 +1,11 @@
-<script setup lang="ts">
+<script setup>
 import { ref } from "vue";
 
 const email = ref("");
 const botcheck = ref(false);
 const message = ref("");
 const formMessage = ref("");
-const isSuccess = ref<boolean | null>(null);
+const isSuccess = ref(null);
 const isLoading = ref(false);
 
 const submitForm = async () => {
@@ -146,7 +146,7 @@ form .button:disabled {
 }
 
 .error-message {
-    border-color: var(--c-red);
+  border-color: var(--c-red);
   color: var(--c-red);
 }
 </style>

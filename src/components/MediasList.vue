@@ -1,11 +1,11 @@
-<script setup lang="ts">
+<script setup>
 import TwitterIcon from "@/components/icons/TwitterIcon.vue";
 import ThreadIcon from "@/components/icons/ThreadIcon.vue";
 import BlueskyIcon from "@/components/icons/BlueskyIcon.vue";
 
-defineProps<{
-  isColumn?: boolean;
-}>();
+defineProps({
+  isColumn: Boolean,
+});
 </script>
 
 <template>
@@ -49,7 +49,7 @@ defineProps<{
 .media svg {
   flex: none;
   height: 100%;
-  width: fit-content;;
+  width: fit-content;
 }
 
 .media svg * {

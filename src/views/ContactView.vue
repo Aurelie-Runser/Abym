@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import HeroComp from "@/components/HeroComp.vue";
 import ContactForm from "@/components/ContactForm.vue";
 import MediasList from "@/components/MediasList.vue";
@@ -15,7 +15,7 @@ import MediasList from "@/components/MediasList.vue";
       <h2>Formulaire de contact</h2>
 
       <div class="contact">
-        <ContactForm/>
+        <ContactForm />
         <MediasList isColumn />
       </div>
     </section>

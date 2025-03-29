@@ -9,7 +9,7 @@ import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescri
 export default defineConfigWithVueTs(
   {
     name: 'app/files-to-lint',
-    files: ['**/*.{ts,mts,tsx,vue}'],
+    files: ['**/*.{js,mts,tsx,vue}'],
   },
 
   {
@@ -18,5 +18,4 @@ export default defineConfigWithVueTs(
   },
 
   pluginVue.configs['flat/essential'],
-  vueTsConfigs.recommended,
 )

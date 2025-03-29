@@ -1,18 +1,15 @@
 <template>
   <div class="slider container">
     <div class="card card-first">
-      <div class="">
-      </div>
+      <div class=""></div>
     </div>
     <div class="card card-second">
-      <span class="card-overlay">Classifier</span>
-      <div class="">
-      </div>
+      <span class="card-overlay">Classifié</span>
+      <div class=""></div>
     </div>
     <div class="card card-third">
-      <span class="card-overlay">Classifier</span>
-      <div class="">
-      </div>
+      <span class="card-overlay">Classifié</span>
+      <div class=""></div>
     </div>
   </div>
 </template>
@@ -70,6 +67,6 @@
   width: fit-content;
   font-family: var(--ff-title);
   font-size: var(--fs-xxl);
-  color: var(--c-red)
+  color: var(--c-red);
 }
 </style>

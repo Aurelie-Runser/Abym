@@ -1,13 +1,13 @@
-<script setup lang="ts">
-import LogoBig from "@/components/icons/LogoBig.vue"
-import SVGHero from "@/components/SVGHero.vue"
+<script setup>
+import LogoBig from "@/components/icons/LogoBig.vue";
+import SVGHero from "@/components/SVGHero.vue";
 
-defineProps<{
-  title?: string;
-  text?: string;
-  isHome?: boolean;
-  isError?: boolean;
-}>();
+defineProps({
+  title: String,
+  text: String,
+  isHome: Boolean,
+  isError: Boolean,
+});
 </script>
 
 <template>
@@ -20,7 +20,7 @@ defineProps<{
     <RouterLink v-if="isError" to="/" class="button">Retour Accueil</RouterLink>
 
     <div class="hero-bg">
-      <SVGHero/>
+      <SVGHero />
     </div>
   </section>
 </template>
@@ -76,11 +76,11 @@ defineProps<{
   text-align: center;
 }
 
-.hero .button{
+.hero .button {
   margin: 20px auto 0;
 }
 
-.hero-bg{
+.hero-bg {
   position: absolute;
   z-index: 0;
   top: 0;
@@ -90,7 +90,7 @@ defineProps<{
   overflow: hidden;
 }
 
-.hero-bg svg{
+.hero-bg svg {
   position: absolute;
   top: 50%;
   left: 50%;

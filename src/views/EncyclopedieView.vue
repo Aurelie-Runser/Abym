@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import HeroComp from "@/components/HeroComp.vue";
 import SliderComp from "@/components/SliderComp.vue";
 </script>
@@ -31,8 +31,7 @@ import SliderComp from "@/components/SliderComp.vue";
         <div class="content-image"></div>
       </div>
 
-      <SliderComp/>
-
+      <SliderComp />
     </section>
 
     <section class="textimage">
@@ -56,7 +55,7 @@ import SliderComp from "@/components/SliderComp.vue";
         </div>
       </div>
 
-      <SliderComp/>
+      <SliderComp />
     </section>
   </main>
 </template>

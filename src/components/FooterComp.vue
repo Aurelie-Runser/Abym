@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import SVGFooter from "@/components/SVGFooter.vue";
 import MediasList from "@/components/MediasList.vue";
 </script>
@@ -6,24 +6,24 @@ import MediasList from "@/components/MediasList.vue";
 <template>
   <footer class="main-footer ripples-anime">
     <div class="footer-svg">
-      <SVGFooter/>
+      <SVGFooter />
     </div>
     <div class="footer-container">
       <div class="container">
         <div class="footer-nav">
           <p class="footer-title">L'encyclopédie</p>
-  
+
           <RouterLink class="footer-link" to="/encyclopedie">Découvrir l'encyclopédie ></RouterLink>
         </div>
-  
+
         <div class="footer-contact">
           <p class="footer-title">Nous contacter</p>
-  
+
           <RouterLink class="footer-link" to="/contact">Nous contacter ></RouterLink>
-  
+
           <p>Découvrir nos réseaux sociaux pour en savoir plus sur l'avancement du jeu.</p>
-  
-          <MediasList/>
+
+          <MediasList />
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@ import MediasList from "@/components/MediasList.vue";
 </template>
 
 <style>
-.footer-svg svg{
+.footer-svg svg {
   position: relative;
   z-index: 0;
   translate: 0 10px;
@@ -44,7 +44,7 @@ import MediasList from "@/components/MediasList.vue";
   padding-bottom: 90px;
 }
 
-.footer-container .container{
+.footer-container .container {
   display: flex;
   flex-wrap: wrap;
   gap: 50px 100px;

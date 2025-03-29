@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import HeroComp from "@/components/HeroComp.vue";
 import Objet3D from "@/components/Objet3D.vue";
 import MediasList from "@/components/MediasList.vue";
