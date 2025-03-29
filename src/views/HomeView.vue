@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HeroComp from "@/components/HeroComp.vue";
+import Objet3D from "@/components/Objet3D.vue";
 import MediasList from "@/components/MediasList.vue";
 </script>
 
@@ -25,7 +26,14 @@ import MediasList from "@/components/MediasList.vue";
           <p>Vous incarner Eclaireur N°67, et la survie de cette civilisation dépend de vous.</p>
         </div>
 
-        <div class="content-image"></div>
+        <div class="content-image">
+          <Objet3D v-bind="{
+            model: '/models/fish.glb',
+            cameraPosition: [4, 0, 2],
+            amplitude: 0.1
+        }"
+        />
+        </div>
       </div>
     </section>
 
@@ -47,14 +55,28 @@ import MediasList from "@/components/MediasList.vue";
             </p>
           </div>
 
-          <div class="content-image"></div>
+          <div class="content-image">
+            <Objet3D v-bind="{
+              model: '/models/fish-2.glb',
+              cameraPosition: [0.4, 0, 0],
+              amplitude: 0.005
+            }"
+            />
+          </div>
         </div>
       </div>
     </section>
 
     <section class="textimage">
       <div class="container">
-        <div class="content-image"></div>
+        <div class="content-image">
+          <Objet3D v-bind="{
+            model: '/models/fish-1.glb',
+            cameraPosition: [0, 0, -1],
+            amplitude: 0.02
+          }"
+          />
+        </div>
 
         <div class="textimage-content">
           <h2>Une encyclopédie à compléter</h2>
