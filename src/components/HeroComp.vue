@@ -30,6 +30,7 @@ defineProps({
   position: relative;
   width: 100%;
   height: 70dvh;
+  min-height: 570px;
   display: grid;
   justify-content: center;
   align-content: center;
