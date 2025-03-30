@@ -7,14 +7,14 @@ import Logotext from "@/components/icons/LogoText.vue";
     <nav>
       <ul>
         <li>
-          <RouterLink to="/">
+          <RouterLink class="menu-link" to="/">
             <Logotext />
             <span class="sr-only">Accueil</span>
           </RouterLink>
         </li>
-        <li><RouterLink to="/#histoire">L'histoire</RouterLink></li>
-        <li><RouterLink to="/encyclopedie">L'Encyclopédie</RouterLink></li>
-        <li><RouterLink to="/contact">Contact</RouterLink></li>
+        <li><RouterLink class="menu-link" to="/#histoire">L'histoire</RouterLink></li>
+        <li><RouterLink class="menu-link" to="/encyclopedie">L'Encyclopédie</RouterLink></li>
+        <li><RouterLink class="menu-link" to="/contact">Contact</RouterLink></li>
       </ul>
     </nav>
   </header>
@@ -29,47 +29,53 @@ import Logotext from "@/components/icons/LogoText.vue";
   border-bottom: 3px solid var(--c-white);
   background: rgba(255, 255, 255, 10%);
   backdrop-filter: blur(10px);
-}
 
-.menu ul {
-  width: 100%;
-  max-width: var(--mw);
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  ul {
+    width: 100%;
+    max-width: var(--mw);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.menu li a {
-  display: block;
-  padding: 20px 30px;
-  font-family: var(--ff-title);
-  font-size: var(--fs-lg);
-  text-transform: uppercase;
-}
+    li{
+      .menu-link {
+        display: block;
+        padding: 20px 30px;
+        font-family: var(--ff-title);
+        font-size: var(--fs-lg);
+        text-transform: uppercase;
+      }
 
-.menu li:first-child {
-  margin-right: auto;
-}
+      &:first-child {
+        margin-right: auto;
 
-.menu li:first-child a {
-  padding: 15px 30px;
-}
+        .menu-link {
+          padding: 15px 30px;
 
-.menu li:first-child svg {
-  width: 100px;
-}
+          svg {
+            width: 100px;
+          }
+        }
 
-.menu li:last-child a {
-  background: var(--c-primary-dark);
-}
+        &:hover .menu-link {
+          background: transparent;
 
-.menu li:hover a {
-  background: var(--c-white);
-  color: var(--c-primary);
-}
+          svg * {
+            fill: var(--c-white)
+          }
+        }
+      }
 
-.menu li:first-child:hover svg {
-  filter: none;
+      &:last-child .menu-link {
+        background: var(--c-primary-dark);
+      }
+
+      &:hover .menu-link {
+        background: var(--c-white);
+        color: var(--c-primary);
+      }
+    }
+  }
 }
 </style>

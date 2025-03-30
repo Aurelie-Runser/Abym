@@ -14,7 +14,7 @@
 }
 
 body{
-    background: #02506C;
+    background: var(--c-primary);
 }
 
 
@@ -61,12 +61,13 @@ p, span{
     border-radius: 7px;
     border: none;
     cursor: pointer;
+
+    &:hover{
+        color: var(--c-primary);
+        background: var(--c-primary-light);
+    }
 }
 
-.button:hover{
-    color: var(--c-primary);
-    background: var(--c-primary-light);
-}
 
 .sr-only {
 	border: 0 !important;
