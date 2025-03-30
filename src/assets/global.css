@@ -23,6 +23,12 @@ section{
     padding: 100px 0;
 }
 
+@media (width < 1300px) {
+    .first-section{
+        padding-top: 0;
+    }
+}
+
 .container{
     width: 90vw;
     max-width: var(--mw);

@@ -44,6 +44,12 @@ import MediasList from "@/components/MediasList.vue";
   padding-bottom: 90px;
 }
 
+@media (width < 730px) {
+    .footer-container{
+        padding-top: 90px;
+    }
+}
+
 .footer-container .container {
   display: flex;
   flex-wrap: wrap;

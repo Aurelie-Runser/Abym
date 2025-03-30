@@ -10,7 +10,7 @@ import SliderComp from "@/components/SliderComp.vue";
   />
 
   <main>
-    <section class="textimage">
+    <section class="textimage first-section">
       <div class="container">
         <div class="textimage-content">
           <h2>Découvrez les créatures</h2>

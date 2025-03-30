@@ -11,7 +11,7 @@ import MediasList from "@/components/MediasList.vue";
   />
 
   <main>
-    <section class="container">
+    <section class="container first-section">
       <h2>Formulaire de contact</h2>
 
       <div class="contact">

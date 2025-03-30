@@ -8,7 +8,7 @@ import MediasList from "@/components/MediasList.vue";
   <HeroComp title="Explorer les fonds marins" isHome />
 
   <main>
-    <section id="histoire" class="textimage">
+    <section id="histoire" class="textimage first-section">
       <div class="container">
         <div class="textimage-content">
           <h2>L'Histoire</h2>
