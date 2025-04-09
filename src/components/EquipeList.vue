@@ -11,7 +11,10 @@ defineProps({
 <template>
   <ul class="equipe-list">
     <li class="equipe-item" v-for="(membre, index) in list" :key="index">
-      <img :src="membre.photo" :alt="`${membre.name}`" />
+      <img class="blob-image" :src="membre.photo" :alt="`${membre.name}`"
+            :style="`-webkit-mask: url(${membre.blob});
+            mask: url(${membre.blob});`"
+        />
       <div class="membre-content">
         <p class="membre-name">{{ membre.name }}</p>
         <p class="membre-role">{{ membre.role }}</p>
@@ -44,13 +47,22 @@ defineProps({
     .equipe-item{
         display: block;
         width: 225px;
+        overflow: hidden;
 
-        img{
+        .blob-image{
             display: block;
             width: 100%;
+            height: 100%;
             aspect-ratio: 1/1;
             object-fit: cover;
             background: var(--c-primary-light);
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: contain;
+            -webkit-mask-position: center;
+            translate: 12px 0;
         }
 
         .membre-content{
