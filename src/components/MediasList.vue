@@ -37,6 +37,7 @@ defineProps({
   margin-top: 30px;
   display: flex;
   gap: 25px;
+  width: 100%;
 }
 
 .media {
