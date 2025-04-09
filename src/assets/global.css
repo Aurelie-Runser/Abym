@@ -49,17 +49,41 @@ h2{
     text-transform: uppercase;
 }
 
+h3{
+    font-family: var(--ff-title);
+    font-size: var(--fs-lg);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
 p{
     font-family: var(--ff-text);
     font-weight: 300;
     font-size: var(--fs-md);
     line-height: 150%;
     margin-bottom: 25px;
+
+    a{
+        font-family: inherit;
+        font-size: inherit;
+        color: var(--c-primary-light);
+        text-decoration: underline;
+        font-weight: 500;
+
+        &:hover{
+            filter: brightness(1.2);
+        }
+    }
 }
 
 span, strong{
-    color: inherit;
+    font-family: inherit;
     font-size: inherit;
+    color: inherit;
+}
+
+strong{
+    font-weight: 600;
 }
 
 .button{
