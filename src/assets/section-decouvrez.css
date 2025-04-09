@@ -1,5 +1,6 @@
 section.decouvrez{
     background: var(--c-primary-dark);
+    max-width: 100%;
 }
 
 section.medias{

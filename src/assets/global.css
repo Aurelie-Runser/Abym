@@ -38,6 +38,7 @@ section{
 .content-image{
     flex: 1 1 450px;
     aspect-ratio: 16/9;
+    max-width: 100%;
     /* background: grey; */
 }
 

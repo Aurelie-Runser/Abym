@@ -37,7 +37,7 @@ defineProps({
   margin-top: 30px;
   display: flex;
   gap: 25px;
-  width: 100%;
+  max-width: 100%;
 }
 
 .media {
@@ -50,7 +50,7 @@ defineProps({
 .media svg {
   flex: none;
   height: 100%;
-  width: fit-content;
+  width: auto;
 }
 
 .media svg * {
