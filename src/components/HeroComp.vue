@@ -64,10 +64,7 @@ onBeforeUnmount(() => {
     <div v-if="isHome" class="hero-countdown">
       <p v-if="!isFinished">Disponible dans
         <br/>
-        <strong>{{ format(countdown.days) }}</strong> jours,
-        <strong>{{ format(countdown.hours) }}</strong> heures,
-        <strong>{{ format(countdown.minutes) }}</strong> minutes,
-        <strong>{{ format(countdown.seconds) }}</strong> secondes
+        <span class="countdown-span"><strong>{{ format(countdown.days) }}</strong> jours,</span> <span class="countdown-span"><strong>{{ format(countdown.hours) }}</strong> heures,</span> <span class="countdown-span"><strong>{{ format(countdown.minutes) }}</strong> minutes,</span> <span class="countdown-span"><strong>{{ format(countdown.seconds) }}</strong> secondes</span>
       </p>
       <a href="https://abymgame.itch.io/abym" target="_blank" rel="noopener noreferrer" class="button" v-else>
         Télécharger le jeu
@@ -106,6 +103,11 @@ onBeforeUnmount(() => {
 
 .hero-home {
   height: 100dvh;
+
+  .countdown-span{
+    display: inline-block;
+    width: fit-content;
+  }
 }
 
 .hero .logo {

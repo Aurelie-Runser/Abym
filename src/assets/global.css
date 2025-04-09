@@ -49,7 +49,7 @@ h2{
     text-transform: uppercase;
 }
 
-p, span{
+p{
     font-family: var(--ff-text);
     font-weight: 300;
     font-size: var(--fs-md);
@@ -57,7 +57,7 @@ p, span{
     margin-bottom: 25px;
 }
 
-strong{
+span, strong{
     color: inherit;
     font-size: inherit;
 }
