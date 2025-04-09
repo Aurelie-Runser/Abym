@@ -1,25 +1,12 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref } from 'vue'
 import LogoSmall from "./icons/LogoSmall.vue";
 
 const isMenuOpen = ref(false);
-const isScrolling = ref(false)
-
-const handleScroll = () => {
-  isScrolling.value = window.scrollY > 50
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
 </script>
 
 <template>
-  <header class="menu-mobil" :class="{ 'visible': isScrolling }">
+  <header class="menu-mobil">
     <RouterLink to="/" class="menu-logo">
       <LogoSmall />
       <span class="sr-only">Accueil</span>
@@ -48,7 +35,6 @@ onBeforeUnmount(() => {
 
 <style>
 .menu-mobil {
-  opacity: 0;
   position: fixed;
   z-index: 50;
   top: 0;
@@ -171,8 +157,4 @@ onBeforeUnmount(() => {
     }
   }
 }
-
-.menu-mobil.visible {
-    opacity: 1;
-  }
 </style>

@@ -11,9 +11,11 @@ import MediasList from "@/components/MediasList.vue";
     <div class="footer-container">
       <div class="container">
         <div class="footer-nav">
-          <p class="footer-title">L'encyclopédie</p>
+          <p class="footer-title">Navigation</p>
 
+          <RouterLink class="footer-link" to="/">Accueil ></RouterLink>
           <RouterLink class="footer-link" to="/encyclopedie">Découvrir l'encyclopédie ></RouterLink>
+          <RouterLink class="footer-link" to="/a-propos">À-propos ></RouterLink>
         </div>
 
         <div class="footer-contact">
