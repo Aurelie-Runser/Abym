@@ -57,6 +57,11 @@ p, span{
     margin-bottom: 25px;
 }
 
+strong{
+    color: inherit;
+    font-size: inherit;
+}
+
 .button{
     display: block;
     width: fit-content;

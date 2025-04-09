@@ -1,4 +1,5 @@
 <script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import LogoBig from "@/components/icons/LogoBig.vue";
 import SVGHero from "@/components/SVGHero.vue";
 
@@ -8,15 +9,72 @@ defineProps({
   isHome: Boolean,
   isError: Boolean,
 });
+
+const countdown = ref({
+  days: 0,
+  hours: 0,
+  minutes: 0,
+  seconds: 0,
+})
+
+let intervalId
+const isFinished = ref(false)
+
+const updateCountdown = () => {
+  const now = new Date()
+  const targetDate = new Date(now.getFullYear(), 4, 20, 0, 0, 0)
+
+  const diff = targetDate - now
+
+  if (diff <= 0) {
+    isFinished.value = true
+    clearInterval(intervalId)
+    return
+  }
+
+  const totalSeconds = Math.floor(diff / 1000)
+  const days = Math.floor(totalSeconds / (3600 * 24))
+  const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600)
+  const minutes = Math.floor((totalSeconds % 3600) / 60)
+  const seconds = totalSeconds % 60
+
+  countdown.value = { days, hours, minutes, seconds }
+}
+
+const format = (n) => String(n).padStart(2, '0')
+
+onMounted(() => {
+  updateCountdown()
+  intervalId = setInterval(updateCountdown, 1000)
+})
+
+onBeforeUnmount(() => {
+  clearInterval(intervalId)
+})
 </script>
 
 <template>
-  <section class="hero" :class="isHome || isError ? 'hero-home' : ''">
+  <section class="hero" :class="{ 'hero-home':isHome, 'hero-error': isError }">
     <div class="logo">
       <LogoBig />
     </div>
     <h1>{{ title }}</h1>
     <p v-if="text">{{ text }}</p>
+
+    <div v-if="isHome" class="hero-countdown">
+      <p v-if="!isFinished">Disponible dans
+        <br/>
+        <strong>{{ format(countdown.days) }}</strong> jours,
+        <strong>{{ format(countdown.hours) }}</strong> heures,
+        <strong>{{ format(countdown.minutes) }}</strong> minutes,
+        <strong>{{ format(countdown.seconds) }}</strong> secondes
+      </p>
+      <a href="https://abymgame.itch.io/abym" target="_blank" rel="noopener noreferrer" class="button" v-else>
+        Télécharger le jeu
+      </a>
+    </div>
+
+
     <RouterLink v-if="isError" to="/" class="button">Retour Accueil</RouterLink>
 
     <div class="hero-bg">
@@ -40,6 +98,10 @@ defineProps({
 .hero * {
   position: relative;
   z-index: 2;
+}
+
+.hero-error {
+  height: 100dvh;
 }
 
 .hero-home {
