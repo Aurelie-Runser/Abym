@@ -1,12 +1,25 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import LogoSmall from "./icons/LogoSmall.vue";
 
 const isMenuOpen = ref(false);
+const isScrolling = ref(false)
+
+const handleScroll = () => {
+  isScrolling.value = window.scrollY > 50
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
-  <header class="menu-mobil">
+  <header class="menu-mobil" :class="{ 'visible': isScrolling }">
     <RouterLink to="/" class="menu-logo">
       <LogoSmall />
       <span class="sr-only">Accueil</span>
@@ -22,11 +35,11 @@ const isMenuOpen = ref(false);
       <nav class="menu-nav">
         <ul>
           <li>
-            <RouterLink class="menu-link" to="/">Accueil</RouterLink>
+            <RouterLink class="menu-link" to="/" @click="isMenuOpen = false">Accueil</RouterLink>
           </li>
-          <li><RouterLink class="menu-link" to="/#histoire">L'histoire</RouterLink></li>
-          <li><RouterLink class="menu-link" to="/encyclopedie">L'Encyclopédie</RouterLink></li>
-          <li><RouterLink class="menu-link" to="/contact">Contact</RouterLink></li>
+          <li><RouterLink class="menu-link" to="/#histoire" @click="isMenuOpen = false">L'histoire</RouterLink></li>
+          <li><RouterLink class="menu-link" to="/encyclopedie" @click="isMenuOpen = false">L'Encyclopédie</RouterLink></li>
+          <li><RouterLink class="menu-link" to="/contact" @click="isMenuOpen = false">Contact</RouterLink></li>
         </ul>
       </nav>
     </div>
@@ -35,6 +48,7 @@ const isMenuOpen = ref(false);
 
 <style>
 .menu-mobil {
+  opacity: 0;
   position: fixed;
   z-index: 50;
   top: 0;
@@ -157,4 +171,8 @@ const isMenuOpen = ref(false);
     }
   }
 }
+
+.menu-mobil.visible {
+    opacity: 1;
+  }
 </style>

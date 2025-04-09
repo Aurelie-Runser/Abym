@@ -1,9 +1,24 @@
 <script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import Logotext from "@/components/icons/LogoText.vue";
+
+const isScrolling = ref(false)
+
+const handleScroll = () => {
+  isScrolling.value = window.scrollY > 50
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
-  <header class="menu">
+  <header class="menu" :class="{ 'visible': isScrolling }">
     <nav>
       <ul>
         <li>
@@ -22,6 +37,7 @@ import Logotext from "@/components/icons/LogoText.vue";
 
 <style>
 .menu {
+  opacity: 0;
   position: fixed;
   z-index: 50;
   top: 0;
@@ -77,5 +93,9 @@ import Logotext from "@/components/icons/LogoText.vue";
       }
     }
   }
+}
+
+.menu.visible {
+  opacity: 1;
 }
 </style>
