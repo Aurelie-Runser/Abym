@@ -50,9 +50,19 @@ defineProps({
   }
 
   &.is-fish{
-    .card {
+    div:first-child{
       img{
         animation: floating 2s ease-in-out alternate infinite;
+      }
+    }
+    div:nth-child(2){
+      img{
+        animation: floating 4s ease-in-out alternate infinite;
+      }
+    }
+    div:nth-child(3){
+      img{
+        animation: floating 3s ease-in-out alternate-reverse infinite;
       }
     }
   }

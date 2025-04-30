@@ -99,6 +99,25 @@ onUnmounted(() => {
   &.card-unknown {
     cursor: not-allowed;
 
+    &::after{
+      z-index: 1;
+      content: 'Classifié';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      rotate: 20deg;
+      font-family: var(--ff-title);
+      font-size: var(--fs-xxl);
+      color: #b31717;
+      scale: 0;
+      transition: all .1s ease-in-out;
+    }
+
+    &:hover::after{
+      scale: 1;
+    }
+
     strong {
       color: #b31717;
       font-style: italic;
