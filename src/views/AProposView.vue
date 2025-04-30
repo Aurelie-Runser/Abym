@@ -14,7 +14,6 @@ const equipeDev = [
     name: "Samuel Klauss",
     role: "Développeur",
     blob: '/blobs/blob-2.svg#blob-2',
-    linkedin: 'https://www.linkedin.com/in/samuelklauss'
   },
   {
     photo: "https://placecats.com/millie_neo/300/300",
@@ -57,16 +56,12 @@ const equipeWeb = [
     name: "Aurélie Runser",
     blob: '/blobs/blob-9.svg#blob-9',
     role: "Développeuse Web, Communicante",
-    linkedin: "https://www.linkedin.com/in/aur%C3%A9lie-runser",
-    web: 'https://portfolio.aurelierunser.fr/'
   },
   {
     photo: "https://placecats.com/g/300/300",
     name: "Eliot Feuvrier",
     role: "Web Designer",
     blob: '/blobs/blob-8.svg#blob-8',
-    linkedin: "https://www.linkedin.com/in/eliot-feuvrier",
-    web: 'https://eliot-feuvrier.fr/'
   }
 ];
 </script>

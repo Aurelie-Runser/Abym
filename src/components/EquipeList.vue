@@ -1,7 +1,5 @@
 <script setup>
-import LinkedinIcon from "@/components/icons/LinkedinIcon.vue";
 import InstaIcon from "@/components/icons/InstaIcon.vue";
-import WebIcon from "@/components/icons/WebIcon.vue";
 
 defineProps({
   list: Array,
@@ -18,18 +16,6 @@ defineProps({
       <div class="membre-content">
         <p class="membre-name">{{ membre.name }}</p>
         <p class="membre-role">{{ membre.role }}</p>
-
-        <div class="membre-medias">
-            <a v-if="membre.linkedin" :href="membre.linkedin" target="_blank" rel="noopener noreferrer">
-                <LinkedinIcon/><span class="sr-only">Compte Linkedin de {{ membre.name }}</span>
-            </a>
-            <a v-if="membre.instagram" :href="membre.instagram" target="_blank" rel="noopener noreferrer">
-                <InstaIcon/><span class="sr-only">Compte Instagram de {{ membre.name }}</span>
-            </a>
-            <a class="web" v-if="membre.web" :href="membre.web" target="_blank" rel="noopener noreferrer">
-                <WebIcon/><span class="sr-only">Portfolio de {{ membre.name }}</span>
-            </a>
-        </div>
       </div>
     </li>
   </ul>
@@ -77,31 +63,6 @@ defineProps({
 
             .membre-role{
                 margin-bottom: 0;
-            }
-
-            .membre-medias{
-                margin-top: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 5px;
-
-                a{
-                    display: block;
-                    width: 45px;
-                    aspect-ratio: 1/1;
-                    fill: var(--c-white);
-                    stroke: var(--c-white);
-
-                    &.web{
-                        scale: 0.8;
-                    }
-
-                    &:hover{
-                        fill: var(--c-primary-light);
-                        stroke: var(--c-primary-light);
-                    }
-                }
             }
         }
 
