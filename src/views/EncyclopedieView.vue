@@ -28,7 +28,12 @@ import SliderComp from "@/components/SliderComp.vue";
         <div class="content-image"></div>
       </div>
 
-      <SliderComp />
+      <SliderComp
+        isFish=true
+        cardFirst="/fish/poisson_1.png"
+        cardSecond="/fish/poisson_2.png"
+        cardThird="/fish/poisson_3.png"
+      />
     </section>
 
     <section class="textimage">
@@ -49,7 +54,12 @@ import SliderComp from "@/components/SliderComp.vue";
         </div>
       </div>
 
-      <SliderComp />
+      <SliderComp 
+        cardFirst="/plantes/corail_light.png"
+        cardSecond="/plantes/corail_2.png"
+        cardThird="/plantes/corail.png"
+        cardFourth="/plantes/plante.png"
+      />
     </section>
   </main>
 </template>
