@@ -12,7 +12,7 @@ const { handleScrollZoom } = pictureScrollZoom('charaZoom', {
 })
 
 const { handleScrollTranslate } = pictureScrollTranslate('fishDescover', {
-  maxOffsetPercent: 50
+  maxOffsetPercent: 25
 })
 
 onMounted(() => {
