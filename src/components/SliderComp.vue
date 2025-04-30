@@ -1,5 +1,5 @@
 <script setup>
-import cardEncyclopedie from "@/components/CardEncyclopedie.vue";
+import CardEncyclopedie from "@/components/CardEncyclopedie.vue";
 
 defineProps({
   isFish: Boolean,
@@ -10,7 +10,7 @@ defineProps({
 <template>
   <div class="slider container" :class="[{ 'slider-fourth': donnees[3], 'is-fish': isFish }]">
     <div v-for="donnee in donnees" :key="donnee.index">
-      <cardEncyclopedie :donnees="donnee"/>
+      <CardEncyclopedie :donnees="donnee"/>
     </div>
   </div>
 </template>
