@@ -86,7 +86,7 @@ import MediasList from "@/components/MediasList.vue";
             Apprenez-en plus sur leur habitat, leurs caractéristiques uniques et leur rôle dans cet
             écosystème mystérieux !
           </p>
-          <a class="button" href="/encyclopedie">En savoir plus</a>
+          <RouterLink class="button" to="/encyclopedie">Consulter</RouterLink>
         </div>
       </div>
     </section>
@@ -104,7 +104,7 @@ import MediasList from "@/components/MediasList.vue";
 
             <MediasList />
 
-            <a class="button" href="/contact">Nous contacter</a>
+            <RouterLink class="button" to="/contact">Nous contacter</RouterLink>
           </div>
 
           <div class="content-image">
