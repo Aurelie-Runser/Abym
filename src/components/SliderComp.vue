@@ -33,6 +33,22 @@ defineProps({
     "fourth";
   }
 
+  div:first-child{
+    grid-area: first;
+  }
+
+  div:nth-child(2){
+    grid-area: second;
+  }
+
+  div:nth-child(3){
+    grid-area: third;
+  }
+
+  div:nth-child(4){
+    grid-area: fourth;
+  }
+
   &.is-fish{
     .card {
       img{
