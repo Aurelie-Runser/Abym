@@ -4,14 +4,6 @@ import { onMounted, onBeforeUnmount } from 'vue'
 let lastScrollY = 0;
 
 const heroParalaxe = () => {
-  const hero = document.querySelector('svgHero')
-  const rect = hero.getBoundingClientRect()
-
-  const windowHeight = window.innerHeight
-  if (rect.bottom < 0 || rect.top > windowHeight) {
-    return
-  }
-
   const clouds = document.querySelectorAll('.cloud')
   const montagnes = document.querySelectorAll('.montagne')
 
