@@ -92,7 +92,7 @@ defineProps({
   margin: 20px auto 0;
 }
 
-.hero-bg {
+.hero .hero-bg {
   position: absolute;
   z-index: 0;
   top: 0;
@@ -102,12 +102,24 @@ defineProps({
   overflow: hidden;
 }
 
-.hero-bg svg {
+.hero .hero-bg svg {
   position: absolute;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
   min-height: 100%;
   min-width: 100%;
+}
+
+.hero .hero-bg svg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -55%;
+  min-height: 100%;
+  min-width: 100%;
+}
+.hero-home .hero-bg svg{
+  translate: -50% -50%;
 }
 </style>
