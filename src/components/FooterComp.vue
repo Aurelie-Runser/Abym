@@ -1,6 +1,7 @@
 <script setup>
 import SVGFooter from "@/components/SVGFooter.vue";
 import MediasList from "@/components/MediasList.vue";
+import GameCounter from "@/components/GameCounter.vue";
 </script>
 
 <template>
@@ -26,6 +27,10 @@ import MediasList from "@/components/MediasList.vue";
           <p>Découvrir nos réseaux sociaux pour en savoir plus sur l'avancement du jeu.</p>
 
           <MediasList />
+        </div>
+
+        <div class="footer-game">
+          <GameCounter/>
         </div>
       </div>
     </div>
@@ -60,6 +65,7 @@ import MediasList from "@/components/MediasList.vue";
 
 .footer-contact {
   flex: 1 1 150px;
+  max-width: fit-content;
 }
 
 .footer-title {
@@ -78,5 +84,28 @@ import MediasList from "@/components/MediasList.vue";
 
 .footer-link:hover {
   color: var(--c-primary-light);
+}
+
+.footer-game{
+
+  p{
+    font-family: var(--ff-title);
+    font-size: var(--fs-lg);
+    text-transform: uppercase;
+
+    span{
+      text-transform: none;
+    }
+  }
+
+  .button{
+    color: var(--c-primary-dark);
+    background: var(--c-primary-light);
+
+    &:hover{
+      color: var(--c-white);
+      background: var(--c-primary);
+    }
+  }
 }
 </style>

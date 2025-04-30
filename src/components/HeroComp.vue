@@ -1,7 +1,7 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
 import LogoBig from "@/components/icons/LogoBig.vue";
 import SVGHero from "@/components/SVGHero.vue";
+import GameCounter from "@/components/GameCounter.vue";
 
 defineProps({
   title: String,
@@ -9,48 +9,6 @@ defineProps({
   isHome: Boolean,
   isError: Boolean,
 });
-
-const countdown = ref({
-  days: 0,
-  hours: 0,
-  minutes: 0,
-  seconds: 0,
-})
-
-let intervalId
-const isFinished = ref(false)
-
-const updateCountdown = () => {
-  const now = new Date()
-  const targetDate = new Date(now.getFullYear(), 4, 20, 0, 0, 0)
-
-  const diff = targetDate - now
-
-  if (diff <= 0) {
-    isFinished.value = true
-    clearInterval(intervalId)
-    return
-  }
-
-  const totalSeconds = Math.floor(diff / 1000)
-  const days = Math.floor(totalSeconds / (3600 * 24))
-  const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600)
-  const minutes = Math.floor((totalSeconds % 3600) / 60)
-  const seconds = totalSeconds % 60
-
-  countdown.value = { days, hours, minutes, seconds }
-}
-
-const format = (n) => String(n).padStart(2, '0')
-
-onMounted(() => {
-  updateCountdown()
-  intervalId = setInterval(updateCountdown, 1000)
-})
-
-onBeforeUnmount(() => {
-  clearInterval(intervalId)
-})
 </script>
 
 <template>
@@ -62,13 +20,7 @@ onBeforeUnmount(() => {
     <p v-if="text">{{ text }}</p>
 
     <div v-if="isHome" class="hero-countdown">
-      <p v-if="!isFinished">Disponible dans
-        <br/>
-        <span class="countdown-span"><strong>{{ format(countdown.days) }}</strong> jours,</span> <span class="countdown-span"><strong>{{ format(countdown.hours) }}</strong> heures,</span> <span class="countdown-span"><strong>{{ format(countdown.minutes) }}</strong> minutes,</span> <span class="countdown-span"><strong>{{ format(countdown.seconds) }}</strong> secondes</span>
-      </p>
-      <a href="https://abymgame.itch.io/abym" target="_blank" rel="noopener noreferrer" class="button" v-else>
-        Télécharger le jeu
-      </a>
+      <GameCounter/>
     </div>
 
 
@@ -103,11 +55,6 @@ onBeforeUnmount(() => {
 
 .hero-home {
   height: 100dvh;
-
-  .countdown-span{
-    display: inline-block;
-    width: fit-content;
-  }
 }
 
 .hero .logo {
