@@ -1,5 +1,5 @@
 <script setup>
-import cardEncyclopedie from "@/components/cardEncyclopedie.vue";
+import cardEncyclopedie from "@/components/CardEncyclopedie.vue";
 
 defineProps({
   isFish: Boolean,
