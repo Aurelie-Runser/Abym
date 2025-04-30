@@ -5,7 +5,7 @@ import EquipeList from "@/components/EquipeList.vue";
 const equipeDev = [
   {
     photo: "https://placecats.com/neo/300/300",
-    name: "Enzo",
+    name: "Enzo Ragni",
     role: "Chef de projet, Développeur",
     blob: '/blobs/blob-1.svg#blob-1'
   },
@@ -39,7 +39,7 @@ const equipeDesign = [
   },
   {
     photo: "https://placecats.com/bella/300/300",
-    name: "William",
+    name: "William Duringer",
     role: "Modélisateur 3D",
     blob: '/blobs/blob-6.svg#blob-6'
   },
@@ -88,7 +88,7 @@ const equipeWeb = [
           </p>
           <p>
             Durant une année, il a été le chefs de 8 de ses camarades afin de donner vie au projet Abym. <br/>
-            En tout, ce sont trois développeurs, trois modélisateurs 3D, un sound-designer qui ont réalisé ce jeu vidéo, ainsi qu'un web designer et une développeuse web qui ont communiqué et populariser Abym.
+            En tout, ce sont trois développeurs, trois modélisateurs 3D, un sound-designer qui ont réalisé ce jeu vidéo, ainsi qu'un web designer et une développeuse web qui ont intégré le site vitrine d'Abym.
           </p>
         </div>
 
