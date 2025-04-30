@@ -77,8 +77,8 @@ p{
 }
 
 span, strong{
-    font-family: inherit;
-    font-size: inherit;
+    font-family: var(--ff-text);
+    font-size: var(--fs-md);
     color: inherit;
 }
 
