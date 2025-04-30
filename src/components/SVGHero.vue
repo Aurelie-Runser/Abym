@@ -145,15 +145,15 @@
 }
 
 #vague-2{
-  animation: waveAnim 5s .5s ease-in-out infinite;
+  animation: waveAnim 5s ease-in-out infinite;
 }
 
 #vague-3{
-  animation: waveAnim 6s 1s ease-in-out infinite reverse;
+  animation: waveAnim 6s ease-in-out infinite reverse;
 }
 
 #vague-4{
-  animation: waveAnim 4s 1.5s ease-in-out infinite;
+  animation: waveAnim 4s ease-in-out infinite;
 }
 
 #cloud-1{

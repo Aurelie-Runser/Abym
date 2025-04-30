@@ -16,16 +16,13 @@ import SliderComp from "@/components/SliderComp.vue";
           <h2>Découvrez les créatures</h2>
 
           <p>
-            Atterrie sur une planète inexploré, Eclaireur N°67, recrut du protocole ???, a pour
-            mission de parcours ces océans afin de trouver un remède dans l'objectif de sauver son
-            peuple d'une pandémie mortelle.
+            Explorez un monde marin peuplé de créatures aussi variées que surprenantes.
+            <br/>Chaque poisson rencontré possède un comportement unique : certains nagent paisiblement, d'autres fuient à votre approche, tandis que les plus dangereux vous attaqueront sans hésiter.
           </p>
           <p>
-            Les plantes, les animaux, les microbes... tout doit être observé, consigné dans son
-            carnet, pour que lors de son retour chez lui, les scientifiques puisse trouver un
-            vaccin.
+            Observez, apprenez et adaptez-vous.
+            <br/>Leur réaction à la lumière, au son ou à vos mouvements peut devenir un atout ou un piège. Restez sur vos gardes : dans les profondeurs, chaque rencontre peut être une menace... ou une opportunité.
           </p>
-          <p>Vous incarner Eclaireur N°67, et la survie de cette civilisation dépend de vous.</p>
         </div>
 
         <div class="content-image"></div>
@@ -42,16 +39,13 @@ import SliderComp from "@/components/SliderComp.vue";
           <h2>Découvrez les plantes</h2>
 
           <p>
-            Atterrie sur une planète inexploré, Eclaireur N°67, recrut du protocole ???, a pour
-            mission de parcours ces océans afin de trouver un remède dans l'objectif de sauver son
-            peuple d'une pandémie mortelle.
+            Les profondeurs regorgent de plantes étranges, belles et parfois menaçantes.
+            <br/>Algues lumineuses, coraux pulsants ou végétaux carnivores, chacune joue un rôle dans l’écosystème  ou dans votre survie.
           </p>
           <p>
-            Les plantes, les animaux, les microbes... tout doit être observé, consigné dans son
-            carnet, pour que lors de son retour chez lui, les scientifiques puisse trouver un
-            vaccin.
+            Approchez-les avec prudence.
+            <br/>Certaines soignent ou offrent des ressources, d'autres réagissent violemment au moindre contact. Observer leur comportement peut faire la différence entre progresser… ou périr.
           </p>
-          <p>Vous incarner Eclaireur N°67, et la survie de cette civilisation dépend de vous.</p>
         </div>
       </div>
 

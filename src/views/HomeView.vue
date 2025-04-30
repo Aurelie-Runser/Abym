@@ -14,7 +14,7 @@ import MediasList from "@/components/MediasList.vue";
           <h2>L'Histoire</h2>
 
           <p>
-            Atterrie sur une planète inexploré, Eclaireur N°67, recrut du protocole ???, a pour
+            Atterrie sur une planète inexploré, Eclaireur N°67, recrut du protocole 51, a pour
             mission de parcours ces océans afin de trouver un remède dans l'objectif de sauver son
             peuple d'une pandémie mortelle.
           </p>
@@ -45,14 +45,11 @@ import MediasList from "@/components/MediasList.vue";
         <div class="decouvrez-content">
           <div class="decouvrez-texts">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Plongez dans cet univers sous-marin à vos risques et périls.
+              <br/>Dans ces eaux inconnues, tout ce qui bouge n'est pas forcément un allié. Certaines créatures fuient, d'autres attaquent sans prévenir. Même les plantes peuvent vous piéger, bloquer votre chemin… ou pire.
             </p>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
+            <p>Observer, analyser, survivre.
+              <br/>À vous de découvrir ce que cache réellement cet océan.
             </p>
           </div>
 
