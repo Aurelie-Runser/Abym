@@ -91,13 +91,4 @@ defineProps({
     }
   }
 }
-
-@keyframes floating{
-  from{
-    translate: 0 -5px;
-  }
-  to{
-    translate: 0 5px;
-  }
-}
 </style>

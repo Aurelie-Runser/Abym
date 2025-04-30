@@ -20,7 +20,7 @@ watch(
 </script>
 
 <template>
-  <div id="app">
+  <div>
     <HeaderMobilComp class="header-mobil" />
     <HeaderComp class="header-pc" />
 

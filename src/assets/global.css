@@ -13,6 +13,11 @@
     color: var(--c-primary);
 }
 
+html{
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
 html,
 .card-content{
     scrollbar-color: var(--c-primary-light) var(--c-primary-dark);
@@ -20,6 +25,7 @@ html,
 }
 
 body{
+    width: 100%;
     background: var(--c-primary);
     overflow-x: hidden;
 }
@@ -40,13 +46,6 @@ section{
     width: 90vw;
     max-width: var(--mw);
     margin: auto;
-}
-
-.content-image{
-    flex: 1 1 450px;
-    aspect-ratio: 16/9;
-    max-width: 100%;
-    /* background: grey; */
 }
 
 h2{
@@ -109,6 +108,15 @@ strong{
         color: var(--c-primary);
         background: var(--c-primary-light);
     }
+}
+
+@keyframes floating{
+  from{
+    translate: 0 -5px;
+  }
+  to{
+    translate: 0 5px;
+  }
 }
 
 .sr-only {

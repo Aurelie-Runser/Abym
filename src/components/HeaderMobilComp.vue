@@ -39,6 +39,7 @@ const isMenuOpen = ref(false);
   z-index: 50;
   top: 0;
   width: 100%;
+  min-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
