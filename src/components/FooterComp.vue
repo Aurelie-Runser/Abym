@@ -38,22 +38,27 @@ import GameCounter from "@/components/GameCounter.vue";
 </template>
 
 <style>
+
+main:has(.equipe) ~ .main-footer .footer-svg svg{
+  background: var(--c-primary-dark);
+}
+
 .footer-svg svg {
   position: relative;
   z-index: 0;
-  translate: 0 10px;
 }
 
 .footer-container {
+  margin-top: -10px;
+  background: var(--c-primary-dark);
   position: relative;
   z-index: 1;
-  background: var(--c-primary-dark);
   padding-bottom: 90px;
 }
 
 @media (width < 730px) {
     .footer-container{
-        padding-top: 90px;
+        padding-top: 50px;
     }
 }
 
