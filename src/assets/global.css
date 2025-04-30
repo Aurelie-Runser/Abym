@@ -6,6 +6,8 @@
     box-sizing: border-box;
     color: var(--c-white);
     transition: all .2s ease-in-out;
+    scrollbar-color: var(--c-primary-light) var(--c-primary-dark);
+    scrollbar-width: thin;
 }
 
 *::selection{
@@ -15,6 +17,7 @@
 
 body{
     background: var(--c-primary);
+    overflow-x: hidden;
 }
 
 
@@ -103,7 +106,6 @@ strong{
         background: var(--c-primary-light);
     }
 }
-
 
 .sr-only {
 	border: 0 !important;

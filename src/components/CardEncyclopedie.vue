@@ -149,7 +149,7 @@ onUnmounted(() => {
   grid-template-rows: 40% 60%;
 
   .card-content{
-    overflow: scroll;
+    overflow: auto;
 
     .name{
       font-family: var(--ff-title);

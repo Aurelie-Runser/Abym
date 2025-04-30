@@ -54,7 +54,7 @@ main{
 
 .grow-out-enter-from, .grow-out-leave-to {
   opacity: 0;
-  scale: 1.2
+  scale: 1.05
 }
 
 .grow-out-enter-active, .grow-out-leave-active {
