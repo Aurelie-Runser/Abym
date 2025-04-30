@@ -23,7 +23,6 @@ defineProps({
       <GameCounter/>
     </div>
 
-
     <RouterLink v-if="isError" to="/" class="button">Retour Accueil</RouterLink>
 
     <div class="hero-bg">
