@@ -4,6 +4,7 @@ import SliderComp from "@/components/SliderComp.vue";
 
 const fishs = [
   {
+    index: 1,
     name : 'Audicyne',
     famille : 'Bonite',
     mesures : 'mesure de 70 à 80 cm pour un poids de 5 ou 6 kg',
@@ -17,15 +18,18 @@ const fishs = [
     image:"/fish/poisson_1.png",
   },
   {
+    index: 2,
     image:"/fish/poisson_2.png",
   },
   {
+    index: 3,
     image:"/fish/poisson_3.png",
   },
 ]
 
 const plantes = [
   {
+    index: 1,
     name: 'Corail Plate',
     attitude : 'Récoltable, coraux solides comme de la pierre',
     aspect : "Petite tige où passe des coraux durs en forme d'assiettes",
@@ -34,12 +38,15 @@ const plantes = [
     image:"/plantes/corail.png"
   },
   {
+    index: 2,
     image:"/plantes/plante.png"
   },
   {
+    index: 3,
     image:"/plantes/corail_light.png"
   },
   {
+    index: 4,
     image:"/plantes/corail_2.png"
   },
 ]
