@@ -1,6 +1,48 @@
 <script setup>
 import HeroComp from "@/components/HeroComp.vue";
 import SliderComp from "@/components/SliderComp.vue";
+
+const fishs = [
+  {
+    name : 'Audicyne',
+    famille : 'Bonite',
+    mesures : 'mesure de 70 à 80 cm pour un poids de 5 ou 6 kg',
+    aspect : 'La bouche porte deux barbillons et peut s’allonger en un tube qui lui permet de communiquer avec les autres ',
+    attitude : 'passagère ',
+    biome : 'Zone 1 ',
+    categorie : 'herbivore',
+    sante : '500',
+    degats : 'Inoffensif',
+    description : 'Petit poisson de proie',
+    image:"/fish/poisson_1.png",
+  },
+  {
+    image:"/fish/poisson_2.png",
+  },
+  {
+    image:"/fish/poisson_3.png",
+  },
+]
+
+const plantes = [
+  {
+    name: 'Corail Plate',
+    attitude : 'Récoltable, coraux solides comme de la pierre',
+    aspect : "Petite tige où passe des coraux durs en forme d'assiettes",
+    biome : 'zone tuto',
+    mesures : '60 m de haut',
+    image:"/plantes/corail.png"
+  },
+  {
+    image:"/plantes/plante.png"
+  },
+  {
+    image:"/plantes/corail_light.png"
+  },
+  {
+    image:"/plantes/corail_2.png"
+  },
+]
 </script>
 
 <template>
@@ -30,9 +72,7 @@ import SliderComp from "@/components/SliderComp.vue";
 
       <SliderComp
         isFish=true
-        cardFirst="/fish/poisson_1.png"
-        cardSecond="/fish/poisson_2.png"
-        cardThird="/fish/poisson_3.png"
+        :donnees="fishs"
       />
     </section>
 
@@ -55,10 +95,7 @@ import SliderComp from "@/components/SliderComp.vue";
       </div>
 
       <SliderComp 
-        cardFirst="/plantes/corail_light.png"
-        cardSecond="/plantes/corail_2.png"
-        cardThird="/plantes/corail.png"
-        cardFourth="/plantes/plante.png"
+        :donnees="plantes"
       />
     </section>
   </main>

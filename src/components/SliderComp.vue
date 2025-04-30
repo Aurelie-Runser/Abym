@@ -1,29 +1,43 @@
 <script setup>
 defineProps({
   isFish: Boolean,
-  cardFirst: String,
-  cardSecond: String,
-  cardThird: String,
-  cardFourth: String,
+  donnees: Array
 });
 </script>
 
 <template>
-  <div class="slider container" :class="[{ 'slider-fourth': cardFourth, 'is-fish': isFish }]">
+  <div class="slider container" :class="[{ 'slider-fourth': donnees[3], 'is-fish': isFish }]">
     <div class="card card-first">
-      <img :src="cardFirst" alt=""/>
+      <div class="card-content">
+        <span class="name">Nom : <strong>{{ donnees[0].name }}</strong></span>
+        <span class="biome">Biome : <strong>{{ donnees[0].biome }}</strong></span>
+        <span v-if="donnees[0].degats" class="danger">Dangerosité : <strong>{{ donnees[0].degats }}</strong></span>
+      </div>
+      <img :src="donnees[0].image" alt=""/>
     </div>
-    <div class="card card-second">
-      <span class="card-overlay">Classifié</span>
-      <img :src="cardSecond" alt=""/>
+    <div class="card card-second card-unknown">
+      <div class="card-content">
+        <span class="name">Nom : <strong>Inconnu</strong></span>
+        <span class="biome">Biome : <strong>Inconnu</strong></span>
+        <span v-if="donnees[0].degats" class="danger">Dangerosité : <strong>Inconnu</strong></span>
+      </div>
+      <img :src="donnees[1].image" alt=""/>
     </div>
-    <div class="card card-third">
-      <span class="card-overlay">Classifié</span>
-      <img :src="cardThird" alt=""/>
+    <div class="card card-third card-unknown">
+      <div class="card-content">
+        <span class="name">Nom : <strong>Inconnu</strong></span>
+        <span class="biome">Biome : <strong>Inconnu</strong></span>
+        <span v-if="donnees[0].degats" class="danger">Dangerosité : <strong>Inconnu</strong></span>
+      </div>
+      <img :src="donnees[2].image" alt=""/>
     </div>
-    <div v-if="cardFourth" class="card card-fourth">
-      <span class="card-overlay">Classifié</span>
-      <img :src="cardFourth" alt=""/>
+    <div v-if="donnees[3]" class="card card-fourth card-unknown">
+      <div class="card-content">
+        <span class="name">Nom : <strong>Inconnu</strong></span>
+        <span class="biome">Biome : <strong>Inconnu</strong></span>
+        <span v-if="donnees[0].degats" class="danger">Dangerosité : <strong>Inconnu</strong></span>
+      </div>
+      <img :src="donnees[3].image" alt=""/>
     </div>
   </div>
 </template>
@@ -84,9 +98,34 @@ defineProps({
   aspect-ratio: 16/9;
   background: linear-gradient(-30deg, #e9e9e910, #e9e9e940);
   border-radius: 15px;
+  cursor: pointer;
 
-  &:has(.card-overlay){
+
+  .card-content{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 10px;
+
+    .name{
+      font-family: var(--ff-title);
+      font-size: var(--fs-lg);
+    }
+  }
+
+  &.card-unknown{
     cursor: not-allowed;
+
+    strong{
+      color: #b31717;
+      font-style: italic;
+    }
   }
 }
 
@@ -104,19 +143,6 @@ defineProps({
 
 .card-fourth {
   grid-area: fourth;
-}
-
-.card-overlay {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  rotate: 25deg;
-  width: fit-content;
-  font-family: var(--ff-title);
-  font-size: var(--fs-xxl);
-  color: var(--c-red);
 }
 
 @keyframes floating{
