@@ -7,19 +7,19 @@ const equipeDev = [
     photo: "https://placecats.com/neo/300/300",
     name: "Enzo Ragni",
     role: "Chef de projet, Développeur",
-    blob: '/blobs/blob-1.svg#blob-1'
+    blob: 'blob-1'
   },
   {
     photo: "https://placecats.com/millie/300/300",
     name: "Samuel Klauss",
     role: "Développeur",
-    blob: '/blobs/blob-2.svg#blob-2',
+    blob: 'blob-2',
   },
   {
     photo: "https://placecats.com/millie_neo/300/300",
     name: "Hugo",
     role: "Développeur",
-    blob: '/blobs/blob-3.svg#blob-3'
+    blob: 'blob-3'
   },
 ];
 
@@ -28,25 +28,25 @@ const equipeDesign = [
     photo: "https://placecats.com/neo_banana/300/300",
     name: "Eva Feindel",
     role: "Modélisatrice 3D",
-    blob: '/blobs/blob-4.svg#blob-4'
+    blob: 'blob-4'
   },
   {
     photo: "https://placecats.com/neo_2/300/300",
     name: "Julie Laquille",
     role: "Modélisatrice 3D",
-    blob: '/blobs/blob-5.svg#blob-5'
+    blob: 'blob-5'
   },
   {
     photo: "https://placecats.com/bella/300/300",
     name: "William Duringer",
     role: "Modélisateur 3D",
-    blob: '/blobs/blob-6.svg#blob-6'
+    blob: 'blob-6'
   },
   {
     photo: "https://placecats.com/poppy/300/300",
     name: "Clément Thuot",
     role: "Sound Designer",
-    blob: '/blobs/blob-7.svg#blob-7'
+    blob: 'blob-7'
   }
 ];
 
@@ -54,14 +54,14 @@ const equipeWeb = [
   {
     photo: "https://placecats.com/louie/300/300",
     name: "Aurélie Runser",
-    blob: '/blobs/blob-9.svg#blob-9',
+    blob: 'blob-8',
     role: "Développeuse Web, Communicante",
   },
   {
     photo: "https://placecats.com/g/300/300",
     name: "Eliot Feuvrier",
     role: "Web Designer",
-    blob: '/blobs/blob-8.svg#blob-8',
+    blob: 'blob-9',
   }
 ];
 </script>
