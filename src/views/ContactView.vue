@@ -5,12 +5,12 @@ import MediasList from "@/components/MediasList.vue";
 </script>
 
 <template>
-  <HeroComp
-    title="Contact"
-    text="Une question ou toute autre demande&nbsp;? Remplissez le formulaire de contact et nous vous répondrons dans les plus brefs délais&nbsp;!"
-  />
-
   <main>
+    <HeroComp
+      title="Contact"
+      text="Une question ou toute autre demande&nbsp;? Remplissez le formulaire de contact et nous vous répondrons dans les plus brefs délais&nbsp;!"
+    />
+
     <section class="container first-section">
       <h2>Formulaire de contact</h2>
 

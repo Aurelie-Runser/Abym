@@ -53,6 +53,7 @@ import Logotext from "@/components/icons/LogoText.vue";
         .menu-link {
           padding: 15px 30px;
 
+
           svg {
             width: 100px;
           }

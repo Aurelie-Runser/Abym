@@ -1,20 +1,46 @@
 <script setup>
-import { RouterView } from "vue-router";
+import { nextTick, watch } from 'vue'
+import { RouterView, useRoute } from 'vue-router'
 import HeaderMobilComp from "@/components/HeaderMobilComp.vue";
 import HeaderComp from "@/components/HeaderComp.vue";
 import FooterComp from "@/components/FooterComp.vue";
+
+
+const route = useRoute()
+
+watch(
+  () => route.fullPath,
+  async () => {
+    await nextTick()
+    setTimeout(() => {
+      window.scrollTo(0, 0)
+    }, 500)
+  }
+)
 </script>
 
 <template>
-  <HeaderMobilComp class="header-mobil" />
-  <HeaderComp class="header-pc" />
-  <RouterView />
-  <FooterComp />
+  <div id="app">
+    <HeaderMobilComp class="header-mobil" />
+    <HeaderComp class="header-pc" />
+
+    <RouterView v-slot="{ Component }">
+      <transition name="grow-out" mode="out-in">  
+        <Component :is="Component"/>
+      </transition>
+    </RouterView>
+    
+    <FooterComp />
+  </div>
 </template>
 
-<style>
+<style scoped>
 .header-pc{
   display: none;
+}
+
+main{
+  will-change: transform, opacity;
 }
 
 @media (width >= 640px) {
@@ -26,4 +52,12 @@ import FooterComp from "@/components/FooterComp.vue";
   }
 }
 
+.grow-out-enter-from, .grow-out-leave-to {
+  opacity: 0;
+  scale: 1.2
+}
+
+.grow-out-enter-active, .grow-out-leave-active {
+  transition: all 0.5s ease;
+}
 </style>

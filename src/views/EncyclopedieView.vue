@@ -52,12 +52,12 @@ const plantes = [
 </script>
 
 <template>
-  <HeroComp
-    title="L'Encyclopédie"
-    text="Découvrez les premières plantes et créatures que vous aurez l'occasion de découvrir à travers le jeu"
-  />
-
   <main>
+    <HeroComp
+      title="L'Encyclopédie"
+      text="Découvrez les premières plantes et créatures que vous aurez l'occasion de découvrir à travers le jeu"
+    />
+    
     <section class="textimage first-section">
       <div class="container">
         <div class="textimage-content">

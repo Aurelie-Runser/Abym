@@ -67,9 +67,9 @@ const equipeWeb = [
 </script>
 
 <template>
-  <HeroComp title="À-propos" text="Pourquoi et par qui a été réalisé ABYM&nbsp;?" />
-
   <main>
+    <HeroComp title="À-propos" text="Pourquoi et par qui a été réalisé ABYM&nbsp;?" />
+    
     <section class="textimage first-section">
       <div class="container">
         <div class="textimage-content">

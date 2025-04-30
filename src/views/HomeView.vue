@@ -5,9 +5,9 @@ import MediasList from "@/components/MediasList.vue";
 </script>
 
 <template>
-  <HeroComp title="Explorer les fonds marins" isHome />
-
   <main>
+    <HeroComp title="Explorer les fonds marins" isHome />
+    
     <section id="histoire" class="textimage first-section">
       <div class="container">
         <div class="textimage-content">
