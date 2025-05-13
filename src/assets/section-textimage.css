@@ -8,10 +8,6 @@ section.textimage .container:not(.slider) {
 
 .bg-dark{
     background: var(--c-primary-dark);
-
-    img{
-        filter: brightness(200%);
-    }
 }
 
 .textimage-content{

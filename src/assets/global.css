@@ -82,10 +82,19 @@ p{
     }
 }
 
-span, strong{
+span, strong, .my-liste li{
     font-family: var(--ff-text);
     font-size: var(--fs-md);
     color: inherit;
+}
+
+.my-liste{
+    list-style: disc;
+    padding-left: 20px;
+
+    li{
+        margin-bottom: 20px;
+    }
 }
 
 strong{
