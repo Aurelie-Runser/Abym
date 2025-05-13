@@ -55,7 +55,7 @@ const equipeWeb = [
     photo: "https://placecats.com/louie/300/300",
     name: "Aurélie Runser",
     blob: 'blob-8',
-    role: "Développeuse Web, Communicante",
+    role: "Développeuse Web",
   },
   {
     photo: "https://placecats.com/g/300/300",

@@ -12,7 +12,7 @@ import Logotext from "@/components/icons/LogoText.vue";
             <span class="sr-only">Accueil</span>
           </RouterLink>
         </li>
-        <li><RouterLink class="menu-link" to="/#histoire">L'histoire</RouterLink></li>
+        <li><RouterLink class="menu-link" to="/informations">Informations</RouterLink></li>
         <li><RouterLink class="menu-link" to="/encyclopedie">L'Encyclopédie</RouterLink></li>
         <li><RouterLink class="menu-link" to="/contact">Contact</RouterLink></li>
       </ul>
@@ -27,7 +27,7 @@ import Logotext from "@/components/icons/LogoText.vue";
   top: 0;
   width: 100%;
   border-bottom: 3px solid var(--c-white);
-  background: rgba(255, 255, 255, 10%);
+  background: rgba(0, 0, 0, 20%);
   backdrop-filter: blur(10px);
 
   ul {

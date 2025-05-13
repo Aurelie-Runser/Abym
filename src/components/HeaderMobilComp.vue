@@ -24,7 +24,7 @@ const isMenuOpen = ref(false);
           <li>
             <RouterLink class="menu-link" to="/" @click="isMenuOpen = false">Accueil</RouterLink>
           </li>
-          <li><RouterLink class="menu-link" to="/#histoire" @click="isMenuOpen = false">L'histoire</RouterLink></li>
+          <li><RouterLink class="menu-link" to="/informations" @click="isMenuOpen = false">Informations</RouterLink></li>
           <li><RouterLink class="menu-link" to="/encyclopedie" @click="isMenuOpen = false">L'Encyclopédie</RouterLink></li>
           <li><RouterLink class="menu-link" to="/contact" @click="isMenuOpen = false">Contact</RouterLink></li>
         </ul>
