@@ -20,115 +20,115 @@ defineProps({
 
 <style scoped>
 .equipe-list{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    gap: 50px 20px;
-    margin: 20px auto 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 50px 20px;
+  margin: 20px auto 40px;
 
-    .equipe-item{
-        display: block;
-        width: 225px;
-        overflow: hidden;
+  .equipe-item{
+    display: block;
+    width: 225px;
+    overflow: hidden;
 
-        .blob-image{
-            display: block;
-            width: 100%;
-            height: 100%;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            background: var(--c-primary-light);
-            
-            &.blob-1{
-                border-radius: 60% 40% 55% 45% / 35% 65% 60% 40%;
+    .blob-image{
+      display: block;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      background: var(--c-primary-light);
+      
+      &.blob-1{
+          border-radius: 60% 40% 55% 45% / 35% 65% 60% 40%;
 
-                &:hover{   
-                    animation: morph1 4s linear infinite;
-                }
-            }
+          &:hover{   
+            animation: morph1 4s linear infinite;
+          }
+      }
 
-            &.blob-2 {
-                border-radius: 50% 50% 60% 40% / 70% 30% 50% 50%;
-
-                &:hover{   
-                    animation: morph2 4s linear infinite;
-                }
-            }
-
-            &.blob-3{
-                border-radius: 35% 65% 45% 55% / 55% 45% 35% 65%;
-
-                &:hover{   
-                    animation: morph3 4s linear infinite;
-                }
-            }
-
-            &.blob-4{
-                border-radius: 55% 45% 70% 30% / 30% 70% 60% 40%;
-
-                &:hover{   
-                    animation: morph4 4s linear infinite;
-                }
-            }
-
-            &.blob-5{
-                border-radius: 58% 42% 36% 64% / 38% 62% 58% 42%;
-
-                &:hover{   
-                    animation: morph5 4s linear infinite;
-                }
-            }
-
-            &.blob-6{
-                border-radius: 68% 32% 62% 38% / 48% 52% 68% 32%;
-
-                &:hover{   
-                    animation: morph6 4s linear infinite;
-                }
-            }
-
-            &.blob-7{
-                border-radius: 48% 52% 66% 34% / 60% 40% 45% 55%;
-
-                &:hover{   
-                    animation: morph7 4s linear infinite;
-                }
-            }
-
-            &.blob-8{
-                border-radius: 66% 34% 58% 42% / 48% 52% 66% 34%;
-
-                &:hover{   
-                    animation: morph8 4s linear infinite;
-                }
-            }
-
-            &.blob-9{
-                border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
-
-                &:hover{   
-                    animation: morph9 4s linear infinite;
-                }
-            }
+      &.blob-2 {
+        border-radius: 50% 50% 60% 40% / 70% 30% 50% 50%;
+        
+        &:hover{   
+            animation: morph2 4s linear infinite;
         }
+      }
 
-        .membre-content{
-            text-align: center;
-            margin-top: 10px;
+      &.blob-3{
+        border-radius: 35% 65% 45% 55% / 55% 45% 35% 65%;
 
-            .membre-name{
-                font-weight: 700;
-                font-size: var(--fs-lg);
-                margin-bottom: 5px;
-                color: var(--c-primary-light);
-            }
+        &:hover{   
+          animation: morph3 4s linear infinite;
+        }
+      }
 
-            .membre-role{
-                margin-bottom: 0;
-            }
+      &.blob-4{
+        border-radius: 55% 45% 70% 30% / 30% 70% 60% 40%;
+
+        &:hover{   
+          animation: morph4 4s linear infinite;
+        }
+      }
+
+      &.blob-5{
+        border-radius: 58% 42% 36% 64% / 38% 62% 58% 42%;
+
+        &:hover{   
+          animation: morph5 4s linear infinite;
+        }
+      }
+
+      &.blob-6{
+        border-radius: 68% 32% 62% 38% / 48% 52% 68% 32%;
+        
+        &:hover{   
+          animation: morph6 4s linear infinite;
+        }
+      }
+
+      &.blob-7{
+        border-radius: 48% 52% 66% 34% / 60% 40% 45% 55%;
+        
+        &:hover{   
+          animation: morph7 4s linear infinite;
+        }
+      }
+
+      &.blob-8{
+        border-radius: 66% 34% 58% 42% / 48% 52% 66% 34%;
+        
+        &:hover{   
+          animation: morph8 4s linear infinite;
+        }
+      }
+
+        &.blob-9{
+          border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+          
+          &:hover{   
+            animation: morph9 4s linear infinite;
+          }
         }
     }
+
+    .membre-content{
+      text-align: center;
+      margin-top: 10px;
+
+      .membre-name{
+          font-weight: 700;
+          font-size: var(--fs-lg);
+          margin-bottom: 5px;
+          color: var(--c-primary-light);
+      }
+
+      .membre-role{
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 @keyframes morph1 {

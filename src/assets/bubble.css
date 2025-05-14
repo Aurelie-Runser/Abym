@@ -1,0 +1,32 @@
+.bubble{
+    position: fixed;
+    z-index: 100;
+    top: 100%;
+    border-radius: 50%;
+    display: block;
+    background: transparent;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 50%);
+    animation: bubbleAnime 4s linear infinite ;
+    pointer-events: none;
+
+    &::before{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 25%;
+        height: 25%;
+        top: 20%;
+        left: 20%;
+        border-radius: 50%;
+        background: radial-gradient(var(--c-white), transparent);
+    }
+}
+
+@keyframes bubbleAnime {
+    0%{
+        translate: 0;
+    }
+    100% {
+        translate: 0 -1200%;
+    }
+}
