@@ -11,9 +11,7 @@ const { handleScrollZoom } = pictureScrollZoom('charaZoom', {
   scrollFactor: 1000
 })
 
-const { handleScrollTranslate } = pictureScrollTranslate('fishDescover', {
-  maxOffsetPercent: 25
-})
+const { handleScrollTranslate } = pictureScrollTranslate('fishDescover')
 
 onMounted(() => {
   window.addEventListener('scroll', handleScrollZoom)

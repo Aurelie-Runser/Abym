@@ -15,6 +15,7 @@ import GameCounter from "@/components/GameCounter.vue";
           <p class="footer-title">Navigation</p>
 
           <RouterLink class="footer-link" to="/">Accueil ></RouterLink>
+          <RouterLink class="footer-link" to="/informations">Informations ></RouterLink>
           <RouterLink class="footer-link" to="/encyclopedie">Découvrir l'encyclopédie ></RouterLink>
           <RouterLink class="footer-link" to="/a-propos">À-propos ></RouterLink>
         </div>
@@ -48,7 +49,7 @@ import GameCounter from "@/components/GameCounter.vue";
   background: var(--c-primary-dark);
   position: relative;
   z-index: 1;
-  padding-bottom: 90px;
+  padding-bottom: 50px;
 }
 
 @media (width < 730px) {
@@ -79,7 +80,10 @@ import GameCounter from "@/components/GameCounter.vue";
   display: block;
   font-family: var(--ff-text);
   font-size: var(--fs-md);
-  margin-bottom: 30px;
+  
+  &:not(:last-child){
+    margin-bottom: 30px;
+  }
 }
 
 .footer-link:hover {

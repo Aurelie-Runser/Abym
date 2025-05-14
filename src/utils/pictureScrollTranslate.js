@@ -1,6 +1,6 @@
 export function pictureScrollTranslate(targetId = '', options = {}) {
   const {
-    maxOffsetPercent = 50 // de +50% à -50%
+    maxOffsetPercent = 10
   } = options
 
   const handleScrollTranslate = () => {

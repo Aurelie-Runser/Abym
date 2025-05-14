@@ -4,9 +4,7 @@ import { pictureScrollTranslate } from '@/utils/pictureScrollTranslate.js'
 import HeroComp from "@/components/HeroComp.vue";
 import SliderComp from "@/components/SliderComp.vue";
 
-const { handleScrollTranslate } = pictureScrollTranslate('fishDescover2', {
-  maxOffsetPercent: 25
-})
+const { handleScrollTranslate } = pictureScrollTranslate('fishDescover2')
 
 onMounted(() => {
   window.addEventListener('scroll', handleScrollTranslate)
