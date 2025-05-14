@@ -68,7 +68,7 @@ onBeforeUnmount(() => {
           </p>
         </div>
 
-        <img id="fishDescover" class="content-image" src="/fish/poisson_1.png"/>
+        <img id="fishDescover" class="content-image" src="/fish/fish_3.png"/>
       </div>
     </section>
 

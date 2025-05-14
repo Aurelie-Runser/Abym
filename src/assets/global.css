@@ -34,10 +34,8 @@ body{
 section{
     position: relative;
     padding: 100px 0;
-}
-
-@media (width < 1300px) {
-    .first-section{
+    
+    &.first-section{
         padding-top: 0;
     }
 }

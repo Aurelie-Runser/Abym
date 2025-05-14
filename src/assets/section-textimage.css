@@ -7,7 +7,36 @@ section.textimage .container:not(.slider) {
 }
 
 .bg-dark{
+    padding: 150px 0;
     background: var(--c-primary-dark);
+}
+
+.bg-dark,
+.equipe{
+    position: relative;
+
+    &::before,
+    &::after{
+        content: '';
+        z-index: 0;
+        position: absolute;
+        left: 50%;
+        translate: -50% 0;
+        display: block;
+        width: 100vw;
+        aspect-ratio: 1440 / 100 ;
+        background-size: contain;
+    }
+
+    &::before{
+        top: -2px;
+        background: url(/wave_top.svg) no-repeat bottom var(--c-primary);
+    }
+    
+    &::after{
+        bottom: -1px;
+        background: url(/wave_bottom.svg) no-repeat bottom;
+    }
 }
 
 .textimage-content{
@@ -33,9 +62,9 @@ section.textimage .container:not(.slider) {
     animation: floating 2s ease-in-out alternate infinite;
 }
 
-#fishDescover{
+#fishDescover,
+#fishDescover2{
     animation: floating 1.5s ease-in-out alternate infinite;
-    /* background: red; */
 }
 
 #charaContact{

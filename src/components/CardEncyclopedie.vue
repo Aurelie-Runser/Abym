@@ -50,7 +50,7 @@ onUnmounted(() => {
 
   <teleport to="body">
     <transition name="fade-zoom">
-      <div v-if="isOpen" class="modal-overlay" @click.self="isOpen = false">
+      <div v-if="isOpen" class="modal-overlay" @click="isOpen = false">
         <div class="modal-card">
           <div class="card-content">
             <p class="name">{{ donnees.name }} <span>({{ donnees.famille}})</span></p>
@@ -63,7 +63,7 @@ onUnmounted(() => {
             <p class="description">{{ donnees.description }}</p>
             <p></p>
           </div>
-          <img :src="donnees.image" :alt="'Photo de ' + donnees.name" />
+          <img :src="donnees.image" :alt="'Model de ' + donnees.name" @click.stop />
         </div>
       </div>
     </transition>
@@ -98,6 +98,10 @@ onUnmounted(() => {
   
   &.card-unknown {
     cursor: not-allowed;
+
+    img{
+      filter: brightness(0);
+    }
 
     &::after{
       z-index: 1;

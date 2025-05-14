@@ -1,6 +1,21 @@
 <script setup>
+import { onMounted, onBeforeUnmount } from 'vue'
+import { pictureScrollTranslate } from '@/utils/pictureScrollTranslate.js'
 import HeroComp from "@/components/HeroComp.vue";
 import SliderComp from "@/components/SliderComp.vue";
+
+const { handleScrollTranslate } = pictureScrollTranslate('fishDescover2', {
+  maxOffsetPercent: 25
+})
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScrollTranslate)
+  handleScrollTranslate()
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScrollTranslate)
+})
 
 const fishs = [
   {
@@ -12,15 +27,15 @@ const fishs = [
     biome : 'Zone 1',
     categorie : 'herbivore',
     description : "L'Audicyne est un poisson gracile aux teintes argentées, mesurant jusqu'à 80 cm. Son corps fuselé évoque celui d'une bonite, mais sa particularité réside dans sa bouche allongée en tube, munie de deux barbillons sensibles. Cette extension lui permet non seulement de filtrer certaines algues flottantes, mais aussi d'émettre de légers sons pour communiquer avec ses congénères. Observé en bancs paisibles dans la Zone 1, l'Audicyne est prisé pour son comportement curieux, souvent vu en train de tourner lentement autour des plongeurs. Inoffensif, il joue un rôle clé dans le maintien des micro-algues et de l'équilibre des herbiers marins.",
-    image:"/fish/poisson_1.png",
+    image:"/fish/fish_1.png",
   },
   {
     index: 2,
-    image:"/fish/poisson_2.png",
+    image:"/fish/fish_2.png",
   },
   {
     index: 3,
-    image:"/fish/poisson_3.png",
+    image:"/fish/fish_3.png",
   },
 ]
 
@@ -73,7 +88,7 @@ const plantes = [
           </p>
         </div>
 
-        <div class="content-image"></div>
+        <img id="fishDescover2" class="content-image" src="/fish/fish_1.png"/>
       </div>
 
       <SliderComp

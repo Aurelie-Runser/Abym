@@ -38,11 +38,6 @@ import GameCounter from "@/components/GameCounter.vue";
 </template>
 
 <style>
-
-main:has(.equipe) ~ .main-footer .footer-svg svg{
-  background: var(--c-primary-dark);
-}
-
 .footer-svg svg {
   position: relative;
   z-index: 0;

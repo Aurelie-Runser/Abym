@@ -24,12 +24,13 @@ defineProps({
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-evenly;
-  gap: 50px 20px;
+  gap: 50px 2%;
   margin: 20px auto 40px;
 
   .equipe-item{
     display: block;
-    width: 225px;
+    max-width: 225px;
+    width: 45%;
     overflow: hidden;
 
     .blob-image{

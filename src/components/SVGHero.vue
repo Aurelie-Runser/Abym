@@ -195,23 +195,23 @@ onBeforeUnmount(() => {
 }
 
 #cloud-1{
-  animation: cloudAnim 26s ease-in-out alternate infinite;
+  animation: cloudAnim 16s ease-in-out alternate infinite;
 }
 
 #cloud-2{
-  animation: cloudAnim 20s ease-in-out alternate-reverse infinite;
+  animation: cloudAnim 10s ease-in-out alternate-reverse infinite;
 }
 
 #cloud-3{
-  animation: cloudAnim 15s ease-in-out alternate infinite;
+  animation: cloudAnim 5s ease-in-out alternate infinite;
 }
 
 #cloud-4{
-  animation: cloudAnim 18s ease-in-out alternate-reverse infinite;
+  animation: cloudAnim 8s ease-in-out alternate-reverse infinite;
 }
 
 #cloud-5{
-  animation: cloudAnim 24s ease-in-out alternate infinite;
+  animation: cloudAnim 14s ease-in-out alternate infinite;
 }
 
 @keyframes waveAnim {

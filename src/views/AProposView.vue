@@ -131,5 +131,6 @@ const equipeWeb = [
 
 .equipe{
   background: var(--c-primary-dark);
+  padding-top: 50px;
 }
 </style>
