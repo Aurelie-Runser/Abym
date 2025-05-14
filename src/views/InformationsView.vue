@@ -51,7 +51,7 @@ onBeforeUnmount(() => {
           </p>
 
           <p>
-            Disponible seulement sur <strong>ordinateur</strong>.
+            Disponible seulement sur <strong>ordinateur</strong>. Vous pouvez jouer directement avec le clavier ou utiliser une manette.
           </p>
 
           <p>
@@ -68,14 +68,14 @@ onBeforeUnmount(() => {
         <!-- <img id="" ref="" class="content-image" src="/perso/"/> -->
 
         <div class="textimage-content">
-          <h2>Gameplay</h2>
+          <h2>Commandes</h2>
 
           <ul class="my-liste">
             <li>
-              <strong>ZQSD</strong> : pour vous déplacez dans toutes les directions
+              <strong>ZQSD / flèches directionnelles / joysrick gauche (manette)</strong> : pour vous déplacez dans toutes les directions
             </li>
             <li>
-              <strong>Enter</strong> : pour sélectionner un objet
+              <strong>E / Y (manette)</strong> sur un objet : pour le récupérer / apprendre des informations
             </li>
           </ul>
         </div>
