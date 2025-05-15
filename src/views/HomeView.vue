@@ -49,7 +49,7 @@ onBeforeUnmount(() => {
           <p>Vous incarner Eclaireur N°67, et la survie de cette civilisation dépend de vous.</p>
         </div>
 
-        <img id="charaZoom" ref="charaZoom" class="content-image" src="/perso/CharaPoseSwim.png"/>
+        <img id="charaZoom" ref="charaZoom" class="content-image" src="/perso/CharaPoseSwim.png" alt="Personnage du joueur"/>
       </div>
     </section>
 
@@ -66,13 +66,13 @@ onBeforeUnmount(() => {
           </p>
         </div>
 
-        <img id="fishDescover" class="content-image" src="/fish/fish_3.png"/>
+        <img id="fishDescover" class="content-image" src="/fish/fish_3.png" alt="Poisson du jeu : Lanberko"/>
       </div>
     </section>
 
     <section class="textimage">
       <div class="container">
-        <img class="content-image" src="/perso/CharaPoseSwim.png"/>
+        <img class="content-image" src="/plantes/plante_1.png" alt="Plante du jeu : Corail Plate"/>
 
         <div class="textimage-content">
           <h2>Une encyclopédie à compléter</h2>

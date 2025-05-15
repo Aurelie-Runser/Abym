@@ -47,20 +47,20 @@ const plantes = [
     biome : 'zone tuto',
     mesures : '60 m de haut',
     description : "Le Corail Plate est une formation étonnante, s'élevant en fines tiges rigides d'où jaillissent de larges coraux en forme d'assiettes superposées. Solide comme de la pierre, il peut atteindre jusqu'à 60 mètres de haut, formant de véritables piliers naturels dans la zone tuto. Sa structure résistante en fait un matériau récoltable, prisé par les espèces marines pour s'y abriter. Ce corail témoigne d'une croissance lente mais impressionnante, offrant un paysage vertical saisissant dans les bas-fonds clairs.",
-    image:"/plantes/corail.png"
+    image:"/plantes/plante_1.png"
   },
   {
     index: 2,
-    image:"/plantes/plante.png"
+    image:"/plantes/plante_2.png"
   },
   {
     index: 3,
-    image:"/plantes/corail_light.png"
+    image:"/plantes/plante_3.png"
   },
-  {
-    index: 4,
-    image:"/plantes/corail_2.png"
-  },
+  // {
+  //   index: 4,
+  //   image:"/plantes/corail_2.png"
+  // },
 ]
 </script>
 
@@ -97,7 +97,7 @@ const plantes = [
 
     <section class="textimage">
       <div class="container">
-        <div class="content-image"></div>
+        <img class="content-image" src="/plantes/plante_1.png"/>
 
         <div class="textimage-content">
           <h2>Découvrez les plantes</h2>

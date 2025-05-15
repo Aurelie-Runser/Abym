@@ -7,7 +7,7 @@ section.textimage .container:not(.slider) {
 }
 
 .bg-dark{
-    padding: 150px 0;
+    padding: 150px 0 100px;
     background: var(--c-primary-dark);
 }
 
