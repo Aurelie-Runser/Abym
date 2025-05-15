@@ -9,7 +9,7 @@ defineProps({
 <template>
   <ul class="equipe-list">
     <li class="equipe-item" v-for="(membre, index) in list" :key="index">
-      <img class="blob-image" :class="membre.blob" :src="membre.photo" :alt="`${membre.name}`"/>
+      <img class="blob-image" :class="membre.blob" :src="membre.photo" :alt="`${membre.name}`" loading="lazy"/>
       <div class="membre-content">
         <p class="membre-name">{{ membre.name }}</p>
         <p class="membre-role">{{ membre.role }}</p>

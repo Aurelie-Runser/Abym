@@ -37,7 +37,7 @@ onBeforeUnmount(() => {
           <p>Incarnant un extraterrestre à la recherche d'un remède dans l'objectif de sauver son peuple, <strong>Abym</strong> vous plonge dans <strong>un univers futuriste et angoissant</strong>, où vous devrez explorer le moindre recoin pour vous en sortir.</p>
         </div>
 
-        <img id="charaZoom2" ref="charaZoom2" class="content-image" src="/perso/CharaPoseSwim.png"/>
+        <img id="charaZoom2" ref="charaZoom2" class="content-image" src="/perso/CharaPoseSwim.png" loading="lazy"/>
       </div>
     </section>
 

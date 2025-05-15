@@ -24,7 +24,7 @@ export function pictureScrollTranslate(targetId = '', options = {}) {
 
     // Normaliser de -1 à 1
     const progress = Math.max(-1, Math.min(1, distance / maxDistance))
-    const offset = progress * maxOffsetPercent // -1 → +max, +1 → -max
+    let offset = progress * maxOffsetPercent // -1 → +max, +1 → -max
 
     element.style.transform = `translateX(${offset}%)`
     element.style.transition = 'transform 0.1s ease-out'

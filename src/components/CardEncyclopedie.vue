@@ -1,11 +1,13 @@
 <script setup>
 import { ref, watch, onMounted, onUnmounted } from 'vue'
+import Objet3D from "@/components/Objet3D.vue";
 
 defineProps({
   donnees: Object
 })
 
 const isOpen = ref(false);
+const modelLoaded = ref(false)
 
 const handleKeydown = (event) => {
   if (event.key === 'Escape') {
@@ -18,6 +20,7 @@ watch(isOpen, (newVal) => {
     document.body.style.overflow = 'hidden'
   } else {
     document.body.style.overflow = ''
+    modelLoaded.value = false
   }
 })
 
@@ -44,7 +47,8 @@ onUnmounted(() => {
     </div>
     <img
       :src="donnees.image"
-      :alt="donnees.name ? 'photo d\'un spécimen' : 'silhouette d\'un spécimen'"
+      :alt="donnees.name ?? 'silhouette d\'un spécimen'"
+      loading="lazy"
     />
   </div>
 
@@ -61,9 +65,27 @@ onUnmounted(() => {
             </p>
             <p class="mesures">Mesures : <strong>{{ donnees.mesures }}</strong></p>
             <p class="description">{{ donnees.description }}</p>
-            <p></p>
           </div>
-          <img :src="donnees.image" :alt="'Model de ' + donnees.name" @click.stop />
+          <div class="image" @click.stop>
+            <transition name="fade">
+              <img
+                v-if="!modelLoaded"
+                class="loading-image"
+                :src="donnees.image"
+                :alt="'Modèle 3D de ' + donnees.name"
+                @click.stop
+              />
+            </transition>
+            <Objet3D v-if="donnees.model"
+                v-bind="{
+                  model: donnees.model,
+                  cameraPosition: donnees.cameraPosition,
+                  amplitude: 1,
+                }"
+                @loaded="modelLoaded = true"
+                :title="'Modèle 3D de ' + donnees.name"
+              />
+          </div>
         </div>
       </div>
     </transition>
@@ -173,12 +195,23 @@ onUnmounted(() => {
     }
   }
 
-  img{
+  .image{
     grid-area: 1;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    animation: floating 2s ease-in-out alternate infinite;
+    position: relative;
+    
+    .loading-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      scale: 1.5;
+      object-fit: contain;
+      pointer-events: none;
+      z-index: 10;
+    }
   }
 }
 
@@ -187,7 +220,7 @@ onUnmounted(() => {
     grid-template-columns: 40% 60%;
     grid-template-rows: 1fr;
 
-    img{
+    .image{
       grid-column: 2;
     }
   }
@@ -199,6 +232,16 @@ onUnmounted(() => {
 .fade-zoom-enter-from, .fade-zoom-leave-to {
   opacity: 0;
   transform: scale(0.8);
+}
+
+/* Animation de fondu */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.6s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 </style>

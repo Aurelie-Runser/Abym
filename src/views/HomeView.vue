@@ -1,36 +1,40 @@
 <script setup>
-import { onMounted, onBeforeUnmount } from 'vue'
-import { pictureScrollZoom } from '@/utils/pictureScrollZoom.js'
-import { pictureScrollTranslate } from '@/utils/pictureScrollTranslate.js'
+import { onMounted, onBeforeUnmount } from "vue";
+import { pictureScrollZoom } from "@/utils/pictureScrollZoom.js";
+import { pictureScrollTranslate } from "@/utils/pictureScrollTranslate.js"
+import { pictureScrollZoomTranslate } from "@/utils/pictureScrollZoomTranslate.js"
 import HeroComp from "@/components/HeroComp.vue";
 import MediasList from "@/components/MediasList.vue";
 
-const { handleScrollZoom } = pictureScrollZoom('charaZoom', {
-  minScale: 0.5,
-  maxScale: 2,
-  scrollFactor: 1000
-})
+const { handleScrollZoom: handleCharaZoom } = pictureScrollZoom("charaZoom", {
+  minScale: 0.75,
+  maxScale: 2.25,
+  scrollFactor: 1000,
+});
 
-const { handleScrollTranslate } = pictureScrollTranslate('fishDescover')
+const { handleScrollTranslate: handleFishDiscoverTranslate } = pictureScrollTranslate("fishDescover");
+const { handleScroll: handleFishContactZoomTranslate } = pictureScrollZoomTranslate("fishContact")
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScrollZoom)
-  window.addEventListener('scroll', handleScrollTranslate)
-  handleScrollZoom()
-  handleScrollTranslate()
-})
+  window.addEventListener("scroll", handleCharaZoom);
+  window.addEventListener("scroll", handleFishDiscoverTranslate);
+  window.addEventListener("scroll", handleFishContactZoomTranslate);
+  handleCharaZoom();
+  handleFishDiscoverTranslate();
+  handleFishContactZoomTranslate();
+});
 
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScrollZoom)
-  window.removeEventListener('scroll', handleScrollTranslate)
-})
-
+  window.removeEventListener("scroll", handleCharaZoom);
+  window.removeEventListener("scroll", handleFishDiscoverTranslate);
+  window.removeEventListener("scroll", handleFishContactZoomTranslate);
+});
 </script>
 
 <template>
   <main>
     <HeroComp title="Explorer les fonds marins" isHome />
-    
+
     <section id="histoire" class="textimage first-section">
       <div class="container">
         <div class="textimage-content">
@@ -49,7 +53,13 @@ onBeforeUnmount(() => {
           <p>Vous incarner Eclaireur N°67, et la survie de cette civilisation dépend de vous.</p>
         </div>
 
-        <img id="charaZoom" ref="charaZoom" class="content-image" src="/perso/CharaPoseSwim.png" alt="Personnage du joueur"/>
+        <img
+          id="charaZoom"
+          ref="charaZoom"
+          class="content-image"
+          src="/perso/CharaPoseSwim.png"
+          alt="Personnage du joueur"
+        />
       </div>
     </section>
 
@@ -59,20 +69,23 @@ onBeforeUnmount(() => {
           <h2>Découvrez des créatures térifiantes</h2>
           <p>
             Plongez dans cet univers sous-marin à vos risques et périls.
-            <br/>Dans ces eaux inconnues, tout ce qui bouge n'est pas forcément un allié. Certaines créatures fuient, d'autres attaquent sans prévenir. Même les plantes peuvent vous piéger, bloquer votre chemin… ou pire.
+            <br />Dans ces eaux inconnues, tout ce qui bouge n'est pas forcément un allié. Certaines
+            créatures fuient, d'autres attaquent sans prévenir. Même les plantes peuvent vous
+            piéger, bloquer votre chemin… ou pire.
           </p>
-          <p>Observer, analyser, survivre.
-            <br/>À vous de découvrir ce que cache réellement cet océan.
+          <p>
+            Observer, analyser, survivre. <br />À vous de découvrir ce que cache réellement cet
+            océan.
           </p>
         </div>
 
-        <img id="fishDescover" class="content-image" src="/fish/fish_3.png" alt="Poisson du jeu : Lanberko"/>
+        <img id="fishDescover" class="content-image" src="/fish/fish_3.png" alt="Poisson du jeu : Lanberko" loading="lazy"/>
       </div>
     </section>
 
     <section class="textimage">
       <div class="container">
-        <img class="content-image" src="/plantes/plante_1.png" alt="Plante du jeu : Corail Plate"/>
+        <img class="content-image" src="/plantes/plante_1.png" alt="Plante du jeu : Corail Plate" loading="lazy" />
 
         <div class="textimage-content">
           <h2>Une encyclopédie à compléter</h2>
@@ -99,7 +112,7 @@ onBeforeUnmount(() => {
           <RouterLink class="button" to="/contact">Nous contacter</RouterLink>
         </div>
 
-        <img id="charaContact" class="content-image" src="/perso/CharaPose.png"/>
+        <img id="fishContact" class="content-image" src="/fish/fish_2.png" alt="poisson du jeu" loading="lazy"/>
       </div>
     </section>
   </main>
