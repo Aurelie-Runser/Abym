@@ -11,7 +11,8 @@ defineProps({
 <template>
   <div class="medias-list" :style="isColumn ? 'flex-direction: column' : ' '">
     <a class="media" href="https://x.com/AbymGame" target="_blank" rel="noopener noreferrer">
-      <TwitterIcon /> <span v-if="isColumn">@AbymGame</span>
+      <TwitterIcon />
+      <span :class="[{ 'sr-only': !isColumn }]">@AbymGame</span>
     </a>
     <a
       class="media"
@@ -19,7 +20,8 @@ defineProps({
       target="_blank"
       rel="noopener noreferrer"
     >
-      <ThreadIcon /> <span v-if="isColumn">@abymgame</span>
+      <ThreadIcon />
+      <span :class="[{ 'sr-only': !isColumn }]">@abymgame</span>
     </a>
     <a
       class="media"
@@ -27,7 +29,10 @@ defineProps({
       target="_blank"
       rel="noopener noreferrer"
     >
-      <BlueskyIcon /> <span v-if="isColumn">@abymgame.bsky.social</span>
+      <BlueskyIcon />
+      <span :class="[{ 'sr-only': !isColumn }]"
+        >@abymgame.bsky.social</span
+      >
     </a>
   </div>
 </template>

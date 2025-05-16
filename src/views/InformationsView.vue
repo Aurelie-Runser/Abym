@@ -32,12 +32,15 @@ onBeforeUnmount(() => {
           <h2>Présentation</h2>
 
           <p>
-            <strong>Abym</strong> est un <strong>jeu d'enigme et d'exploration aquatique, à la 3ème personne, vue de côté</strong>.
+            <strong>Abym</strong> est un jeu d'exploration et de résolution d'énigmes en environnement sous-marin, en vue de côté (2.5D), à la troisième personne.
           </p>
-          <p>Incarnant un extraterrestre à la recherche d'un remède dans l'objectif de sauver son peuple, <strong>Abym</strong> vous plonge dans <strong>un univers futuriste et angoissant</strong>, où vous devrez explorer le moindre recoin pour vous en sortir.</p>
+          <p>
+            Vous Incarnez un éclaireur extraterrestre chargé de parcourir les océans d'une planète inconnue pour collecter des données biologiques dans le but de développer un remède destiné à sauver son espèce.
+            <br/>Le gameplay repose sur l'exploration, l'analyse d'organismes vivants et l'interaction avec l'environnement. Vous devez naviguer dans des zones hostiles, résoudre des puzzles contextuels, et éviter des menaces environnementales dynamiques pour réussir.
+          </p>
         </div>
 
-        <img id="charaZoom2" ref="charaZoom2" class="content-image" src="/perso/CharaPoseSwim.png" loading="lazy"/>
+        <img id="charaZoom2" ref="charaZoom2" class="content-image" src="/perso/CharaPoseSwim.png" alt="personnage du joueur" loading="lazy"/>
       </div>
     </section>
 
