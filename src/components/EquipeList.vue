@@ -31,7 +31,6 @@ defineProps({
     display: block;
     max-width: 225px;
     width: 45%;
-    overflow: hidden;
 
     .blob-image{
       display: block;

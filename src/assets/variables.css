@@ -2,7 +2,9 @@
 
 :root {
     --c-primary: #02506C;
+    --c-primary-shadow: #0b4458;
     --c-primary-dark: #1A2C45;
+    --c-primary-dark-shadow: #1b242f;
     --c-primary-light: #70C5D4;
     --c-white: #e9e9e9;
     --c-red: orangered;

@@ -45,8 +45,7 @@ const plantes = [
     name: 'Corail Plate',
     famille: 'Acroporidae',
     categorie : 'Récoltable',
-    aspect : "Petite tige où passe des coraux durs en forme d'assiettes",
-    biome : 'zone tuto',
+    biome : 'Zone tuto',
     mesures : '60 m de haut',
     description : "Le Corail Plate est une formation étonnante, s'élevant en fines tiges rigides d'où jaillissent de larges coraux en forme d'assiettes superposées. Solide comme de la pierre, il peut atteindre jusqu'à 60 mètres de haut, formant de véritables piliers naturels dans la zone tuto. Sa structure résistante en fait un matériau récoltable, prisé par les espèces marines pour s'y abriter. Ce corail témoigne d'une croissance lente mais impressionnante, offrant un paysage vertical saisissant dans les bas-fonds clairs.",
     image:"/plantes/plante_1.png",
@@ -61,10 +60,10 @@ const plantes = [
     index: 3,
     image:"/plantes/plante_3.png"
   },
-  // {
-  //   index: 4,
-  //   image:"/plantes/corail_2.png"
-  // },
+  {
+    index: 4,
+    image:"/plantes/corail_2.png"
+  },
 ]
 </script>
 

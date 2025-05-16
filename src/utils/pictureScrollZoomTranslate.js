@@ -1,9 +1,9 @@
 export function pictureScrollZoomTranslate(id, options = {}) {
     
     const {
-        minScale = 0.5,
-        maxScale = 1.5,
-        maxOffsetPercent = 30
+        minScale = 0.75,
+        maxScale = 1.25,
+        maxOffsetPercent = 20
     } = options;
     
     const handleScroll = () => {
@@ -31,7 +31,7 @@ export function pictureScrollZoomTranslate(id, options = {}) {
     const offset = progress * maxOffsetPercent;
     const scale = minScale + (maxScale - minScale) * normalizedProgress;
 
-    element.style.transform = `translate(${-4*offset}%, ${-offset}%) scale(${scale})`
+    element.style.transform = `translate(${-offset}%, ${-offset}%) scale(${scale})`
     element.style.transformOrigin = "center center";
     element.style.transition = 'transform 0.1s ease-out'
     element.style.position = 'relative'

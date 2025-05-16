@@ -4,8 +4,6 @@ section.textimage .container:not(.slider) {
     justify-content: space-between;
     align-items: center;
     gap: 25px 100px;
-
-
 }
 
 .bg-dark{
@@ -60,7 +58,9 @@ section.textimage .container:not(.slider) {
     z-index: 5;
 }
 
-#charaZoom{
+#charaZoom,
+#charaZoom2{
+    filter: drop-shadow(5px 8px 5px var(--c-primary-shadow));
     transition: transform 0.2s ease;
     transform-origin: center center;
     animation: floating 2s ease-in-out alternate infinite;
@@ -72,6 +72,15 @@ section.textimage .container:not(.slider) {
     animation: floating 1.5s ease-in-out alternate infinite;
 }
 
+#fishDescover{
+    filter: drop-shadow(0 5px 5px var(--c-primary-dark-shadow));
+}
+
+#fishDescover2{
+    filter: drop-shadow(5px 5px 5px var(--c-primary-shadow));
+}
+
 #fishContact{
     animation: floating 2s ease-in-out alternate infinite;
+    filter: drop-shadow(-5px 5px 5px var(--c-primary-shadow));
 }
