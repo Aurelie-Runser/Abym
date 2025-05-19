@@ -112,7 +112,7 @@ onBeforeUnmount(() => {
           <RouterLink class="button" to="/contact">Nous contacter</RouterLink>
         </div>
 
-        <img id="fishContact" class="content-image" src="/fish/fish_22.webp" alt="poisson du jeu" loading="lazy"/>
+        <img id="fishContact" class="content-image" src="/fish/fish_2.webp" alt="poisson du jeu" loading="lazy"/>
       </div>
     </section>
   </main>
