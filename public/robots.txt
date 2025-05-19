@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /404
+
+User-agent: Googlebot-Image
+Disallow: /*.webp
+Disallow: /*.svg
+Disallow: /*.fbx

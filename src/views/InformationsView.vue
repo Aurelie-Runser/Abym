@@ -1,22 +1,5 @@
 <script setup>
-import { onMounted, onBeforeUnmount } from 'vue'
-import { pictureScrollZoom } from '@/utils/pictureScrollZoom.js'
 import HeroComp from "@/components/HeroComp.vue";
-
-const { handleScrollZoom } = pictureScrollZoom('charaZoom2', {
-  minScale: 0.5,
-  maxScale: 2,
-  scrollFactor: 1000
-})
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScrollZoom)
-  handleScrollZoom()
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScrollZoom)
-})
 </script>
 
 <template>
@@ -40,7 +23,7 @@ onBeforeUnmount(() => {
           </p>
         </div>
 
-        <img id="charaZoom2" ref="charaZoom2" class="content-image" src="/perso/CharaPoseSwim.png" alt="personnage du joueur" loading="lazy"/>
+        <img class="content-image" src="/perso/CharaPoseSwim.webp" alt="personnage du joueur" loading="lazy"/>
       </div>
     </section>
 

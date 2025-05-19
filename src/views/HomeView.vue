@@ -57,7 +57,7 @@ onBeforeUnmount(() => {
           id="charaZoom"
           ref="charaZoom"
           class="content-image"
-          src="/perso/CharaPoseSwim.png"
+          src="/perso/CharaPoseSwim.webp"
           alt="Personnage du joueur"
         />
       </div>
@@ -79,13 +79,13 @@ onBeforeUnmount(() => {
           </p>
         </div>
 
-        <img id="fishDescover" class="content-image" src="/fish/fish_3.png" alt="Poisson du jeu : Lanberko" loading="lazy"/>
+        <img id="fishDescover" class="content-image" src="/fish/fish_3.webp" alt="Poisson du jeu : Lanberko" loading="lazy"/>
       </div>
     </section>
 
     <section class="textimage">
       <div class="container">
-        <img class="content-image" src="/plantes/plante_1.png" alt="Plante du jeu : Corail Plate" loading="lazy" />
+        <img class="content-image" src="/plantes/plante_1.webp" alt="Plante du jeu : Corail Plate" loading="lazy" />
 
         <div class="textimage-content">
           <h2>Une encyclopédie à compléter</h2>
@@ -112,7 +112,7 @@ onBeforeUnmount(() => {
           <RouterLink class="button" to="/contact">Nous contacter</RouterLink>
         </div>
 
-        <img id="fishContact" class="content-image" src="/fish/fish_2.png" alt="poisson du jeu" loading="lazy"/>
+        <img id="fishContact" class="content-image" src="/fish/fish_22.webp" alt="poisson du jeu" loading="lazy"/>
       </div>
     </section>
   </main>

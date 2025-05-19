@@ -122,7 +122,7 @@ onUnmounted(() => {
     cursor: not-allowed;
 
     img{
-      filter: brightness(0);
+      filter: brightness(.2);
     }
 
     &::after{

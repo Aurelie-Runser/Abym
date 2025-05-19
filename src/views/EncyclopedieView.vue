@@ -25,17 +25,17 @@ const fishs = [
     biome : 'Zone 1',
     categorie : 'herbivore',
     description : "L'Audicyne est un poisson gracile aux teintes argentées, mesurant jusqu'à 80 cm. Son corps fuselé évoque celui d'une bonite, mais sa particularité réside dans sa bouche allongée en tube, munie de deux barbillons sensibles. Cette extension lui permet non seulement de filtrer certaines algues flottantes, mais aussi d'émettre de légers sons pour communiquer avec ses congénères. Observé en bancs paisibles dans la Zone 1, l'Audicyne est prisé pour son comportement curieux, souvent vu en train de tourner lentement autour des plongeurs. Inoffensif, il joue un rôle clé dans le maintien des micro-algues et de l'équilibre des herbiers marins.",
-    image:"/fish/fish_1.png",
+    image:"/fish/fish_1.webp",
     model:"/models/fish_1.fbx",
     cameraPosition: [0, 1, 7]
   },
   {
     index: 2,
-    image:"/fish/fish_2.png",
+    image:"/fish/fish_2.webp",
   },
   {
     index: 3,
-    image:"/fish/fish_3.png",
+    image:"/fish/fish_3.webp",
   },
 ]
 
@@ -48,21 +48,21 @@ const plantes = [
     biome : 'Zone tuto',
     mesures : '60 m de haut',
     description : "Le Corail Plate est une formation étonnante, s'élevant en fines tiges rigides d'où jaillissent de larges coraux en forme d'assiettes superposées. Solide comme de la pierre, il peut atteindre jusqu'à 60 mètres de haut, formant de véritables piliers naturels dans la zone tuto. Sa structure résistante en fait un matériau récoltable, prisé par les espèces marines pour s'y abriter. Ce corail témoigne d'une croissance lente mais impressionnante, offrant un paysage vertical saisissant dans les bas-fonds clairs.",
-    image:"/plantes/plante_1.png",
+    image:"/plantes/plante_1.webp",
     model:"/models/plante_1.fbx",
     cameraPosition: [0, 1, 4]
   },
   {
     index: 2,
-    image:"/plantes/plante_2.png"
+    image:"/plantes/plante_2.webp"
   },
   {
     index: 3,
-    image:"/plantes/plante_3.png"
+    image:"/plantes/plante_3.webp"
   },
   {
     index: 4,
-    image:"/plantes/corail_2.png"
+    image:"/plantes/plante_4.webp"
   },
 ]
 </script>
@@ -89,7 +89,7 @@ const plantes = [
           </p>
         </div>
 
-        <img id="fishDescover2" class="content-image" src="/fish/fish_1.png" alt="Poisson du jeu : Audicyne" loading="lazy"/>
+        <img id="fishDescover2" class="content-image" src="/fish/fish_1.webp" alt="Poisson du jeu : Audicyne" loading="lazy"/>
       </div>
 
       <SliderComp
@@ -100,7 +100,7 @@ const plantes = [
 
     <section class="textimage">
       <div class="container">
-        <img class="content-image" src="/plantes/plante_1.png" alt="Plante du jeu : Corail Plate" loading="lazy"/>
+        <img class="content-image" src="/plantes/plante_1.webp" alt="Plante du jeu : Corail Plate" loading="lazy"/>
 
         <div class="textimage-content">
           <h2>Découvrez les plantes</h2>
