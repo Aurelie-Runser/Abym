@@ -71,20 +71,20 @@ const isMenuOpen = ref(false);
     border-radius: 30px;
     background: var(--c-primary-dark);
     margin: 10px;
-    padding: 15px 10px;
+    padding: 17px;
     display: flex;
     justify-content: flex-end;
     overflow: hidden;
 
     .menu-burger {
       position: relative;
-      width: 40px;
-      height: 30px;
+      width: 30px;
+      height: 25px;
 
       * {
         position: absolute;
         transform-origin: center center;
-        width: 40px;
+        width: 30px;
         height: 3px;
         border-radius: 3px;
         background: var(--c-white);

@@ -28,6 +28,10 @@ body{
     width: 100%;
     background: var(--c-primary);
     overflow-x: hidden;
+
+    &.no-scroll{
+        overflow: hidden;
+    }
 }
 
 

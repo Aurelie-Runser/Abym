@@ -1,5 +1,6 @@
 <script setup>
 import { ref, watch, onMounted, onUnmounted } from 'vue'
+import CrossIcon from "@/components/icons/CrossIcon.vue";
 import Objet3D from "@/components/Objet3D.vue";
 
 defineProps({
@@ -13,6 +14,15 @@ const handleKeydown = (event) => {
   if (event.key === 'Escape') {
     isOpen.value = false
   }
+}
+
+function toggleOverlay() {
+  isOpen.value = !isOpen.value;
+
+  if(isOpen.value)
+    document.body.classList.add('no-scroll');
+  else 
+    document.body.classList.remove('no-scroll');
 }
 
 watch(isOpen, (newVal) => {
@@ -36,7 +46,7 @@ onUnmounted(() => {
 
 <template>
   <div
-    @click="donnees.name && (isOpen = true)"
+    @click="donnees.name && toggleOverlay()"
     class="card"
     :class="[{ 'card-unknown': !donnees.name }]"
   >
@@ -54,7 +64,7 @@ onUnmounted(() => {
 
   <teleport to="body">
     <transition name="fade-zoom">
-      <div v-if="isOpen" class="modal-overlay" @click="isOpen = false">
+      <div v-if="isOpen" class="modal-overlay" @click="isOpen = false" >
         <div class="modal-card">
           <div class="card-content">
             <p class="name">{{ donnees.name }} <span>({{ donnees.famille}})</span></p>
@@ -86,6 +96,10 @@ onUnmounted(() => {
                 :title="'Modèle 3D de ' + donnees.name"
               />
           </div>
+
+          <button class="modal-button-close" @click="toggleOverlay()">
+            <CrossIcon/> <span class="sr-only">Fermer la modale</span>
+          </button>
         </div>
       </div>
     </transition>
@@ -213,15 +227,42 @@ onUnmounted(() => {
       z-index: 10;
     }
   }
+
+  .modal-button-close{
+    position: absolute;
+    z-index: 43;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    padding: 5px;
+    aspect-ratio: 1/1;
+    background: var(--c-white);
+    fill: var(--c-primary);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    &:hover{
+      background: var(--c-primary-light);
+      fill: var(--c-primary-dark);
+    }
+  }
 }
 
 @media (min-width: 1000px) {
   .modal-card{
+    position: relative;
     grid-template-columns: 40% 60%;
     grid-template-rows: 1fr;
 
     .image{
       grid-column: 2;
+    }
+
+    .modal-button-close{
+      bottom: auto;
+      top: 20px;
+      right: 20px;
     }
   }
 }
