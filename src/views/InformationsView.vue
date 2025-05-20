@@ -64,7 +64,7 @@ import HeroComp from "@/components/HeroComp.vue";
               <strong>E / Y (manette)</strong> sur un objet : pour le récupérer / apprendre des informations
             </li>
             <li class="hidden">
-              <strong>Code Konami</strong> : ???
+              <strong>Code Konami (site)</strong> : ???
             </li>
           </ul>
         </div>
