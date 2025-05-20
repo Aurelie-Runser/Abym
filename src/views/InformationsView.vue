@@ -63,6 +63,9 @@ import HeroComp from "@/components/HeroComp.vue";
             <li>
               <strong>E / Y (manette)</strong> sur un objet : pour le récupérer / apprendre des informations
             </li>
+            <li class="hidden">
+              <strong>Code Konami</strong> : ???
+            </li>
           </ul>
         </div>
       </div>
@@ -83,4 +86,7 @@ import HeroComp from "@/components/HeroComp.vue";
 </template>
 
 <style>
+.hidden{
+  color: var(--c-primary-dark) !important;
+}
 </style>

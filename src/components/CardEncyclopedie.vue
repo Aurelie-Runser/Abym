@@ -45,11 +45,15 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div
+  <button
     @click="donnees.name && toggleOverlay()"
     class="card"
     :class="[{ 'card-unknown': !donnees.name }]"
   >
+    <span class="sr-only">
+      <span v-if="donnees.name">Voir les informations sur {{ donnees.name }}</span>
+      <span v-else>Les informations de cet élément sont confidentielles. Pour les connaître, vous devrez jouer à Abym.</span>
+    </span>
     <div class="card-content">
       <span class="name">Nom : <strong>{{ donnees.name ?? 'Inconnu' }}</strong></span>
       <span class="biome">Habitat : <strong>{{ donnees.biome ?? 'Inconnu' }}</strong></span>
@@ -60,11 +64,11 @@ onUnmounted(() => {
       :alt="donnees.name ?? 'silhouette d\'un spécimen'"
       loading="lazy"
     />
-  </div>
+  </button>
 
   <teleport to="body">
     <transition name="fade-zoom">
-      <div v-if="isOpen" class="modal-overlay" @click="isOpen = false" >
+      <dialog v-if="isOpen" class="modal-overlay" @click="isOpen = false">
         <div class="modal-card">
           <div class="card-content">
             <p class="name">{{ donnees.name }} <span>({{ donnees.famille}})</span></p>
@@ -101,7 +105,7 @@ onUnmounted(() => {
             <CrossIcon/> <span class="sr-only">Fermer la modale</span>
           </button>
         </div>
-      </div>
+      </dialog>
     </transition>
   </teleport>
 </template>
@@ -171,6 +175,9 @@ onUnmounted(() => {
   display: grid;
   place-items: center;
   z-index: 40;
+  width: 100%;
+  height: 100%;
+  border: none;
   padding-top: 60px;
   background: linear-gradient(-30deg, #02506C60, #02506C90);
   backdrop-filter: blur(15px);
@@ -238,7 +245,6 @@ onUnmounted(() => {
     aspect-ratio: 1/1;
     background: var(--c-white);
     fill: var(--c-primary);
-    border: none;
     border-radius: 50%;
     cursor: pointer;
     

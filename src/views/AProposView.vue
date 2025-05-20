@@ -78,7 +78,7 @@ const equipeWeb = [
           <p>
             Abym est un projet de coeur, imaginé par <strong>Enzo</strong>. Lors de sa 1ère année de
             Bachelore au
-            <a href="http://" target="_blank" rel="noopener noreferrer">Ynov Campus de Strasbourg</a>.
+            <a href="https://www.ynov.com/campus/strasbourg" target="_blank" rel="noopener noreferrer">Ynov Campus de Strasbourg</a>.
             Il a enfin pue y concrétiser son projet.
           </p>
           <p>
