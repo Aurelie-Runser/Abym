@@ -41,13 +41,13 @@ onBeforeUnmount(() => {
           <h2>L'Histoire</h2>
 
           <p>
-            Atterri sur une planète inexplorée, Éclaireur N°67, recru du protocole 51, a pour mission de parcourir ces océans afin de trouver un remède dans l'objectif de sauver son peuple d'une pandémie mortelle.
+            Atterri sur une planète inexplorée, Éclaireur N°67, recru du protocole 51, a pour mission de parcourir ces océans afin de déterminer si elle est colonisable.
           </p>
           <p>
-            Les plantes, les animaux, les microbes, tout doit être observé, consigné dans son carnet, pour que lors de son retour chez lui, les scientifiques puissent trouver un vaccin.
+            Les plantes, les animaux, tout doit être observé, consigné dans son carnet, étudié, pour comprendre comment fonctionne ce nouveau monde.
           </p>
           <p>
-            Vous incarnez Éclaireur N°67, et la survie de cette civilisation dépend de vous.
+            Des vestiges d'anciennes civilisations indique que j'adice, cette planete était habitée. Pour quel raison ces peuples ne sont plus ? C'est à l'Éclaireur N°67 de le trouver.
           </p>
         </div>
 

@@ -73,7 +73,7 @@ section.textimage .container:not(.slider) {
 
 #charaFall{
     animation: floating 1.5s ease-in-out alternate infinite, rotate 120s linear infinite;
-    filter: drop-shadow(-5px -10px 5px var(--c-primary-shadow));
+    filter: drop-shadow(-10px -10px 5px var(--c-primary-shadow));
     scale: .9
 }
 

@@ -9,19 +9,19 @@ import HeroComp from "@/components/HeroComp.vue";
       text="Disponibilités, gameplay, règle... tout est décrit ici&nbsp;!"
     />
 
-    <section id="" class="textimage first-section">
+    <section class="textimage first-section">
       <div class="container">
         <div class="textimage-content">
           <h2>Présentation</h2>
 
           <p>
-            <strong>ABYM</strong> est un jeu d'exploration et de résolution d'énigmes en environnement sous-marin. Le jeu est composé de 4 niveaux en vue de côté (2.5D), la caméra positionnée à la troisième personne.
+            <strong>ABYM</strong> est un jeu d'exploration et de résolution d'énigmes en milieu sous-marin. Le jeu est composé de 4 niveaux en vue de côté (2.5D), la caméra positionnée à la troisième personne.
           </p>
           <p>
-            Vous incarnez un éclaireur extraterrestre chargé de parcourir les océans d'une planète inconnue pour collecter des données biologiques dans le but de développer un remède destiné à sauver son espèce.
+            Vous incarnez un éclaireur extraterrestre chargé de parcourir les océans d'une planète inconnue pour collecter des données biologiques dans le but de savoir si votre peuple pourra venir s'y installer, sauvant ainsi votre espèce.
           </p>
           <p>
-              Le gameplay repose sur l'exploration, l'analyse d'organismes vivants et l'interaction avec l'environnement. Vous devez naviguer dans des zones hostiles, résoudre des puzzles contextuels et éviter des menaces environnementales dynamiques pour réussir.
+              Le gameplay repose sur l'exploration, l'analyse d'organismes vivants et l'interaction avec l'environnement. Vous devez naviguer dans des zones hostiles, résoudre des puzzles contextuels, éviter des menaces environnementales et questionner votre moral pour réussir à prendre le bon choix, pour un peuple, mais aussi une planète.
           </p>
         </div>
 
@@ -29,7 +29,7 @@ import HeroComp from "@/components/HeroComp.vue";
       </div>
     </section>
 
-    <section id="" class="textimage first-section">
+    <section class="textimage first-section">
       <div class="container">
         <img class="content-image" src="/game/niv_tutot.png" alt="capture d'écran du tutoriel de ABYM"/>
 
@@ -37,7 +37,7 @@ import HeroComp from "@/components/HeroComp.vue";
           <h2>Informations techniques</h2>
 
           <p>
-            <strong>ABYM</strong> est un disponible sur <a href="https://itch.io/" target="_blank" rel="noopener noreferrer">https://itch.io/</a>, un site d'hébergement, de partage et de téléchargement de jeux vidéo gratuits, à l'adresse : <a href="https://abymgame.itch.io/abym" target="_blank" rel="noopener noreferrer"><strong>https://abymgame.itch.io/abym</strong></a>. 
+            <strong>ABYM</strong> sera un disponible sur <a href="https://itch.io/" target="_blank" rel="noopener noreferrer">https://itch.io/</a>, un site d'hébergement, de partage et de téléchargement de jeux vidéo gratuits, à l'adresse : <a href="https://abymgame.itch.io/abym" target="_blank" rel="noopener noreferrer"><strong>https://abymgame.itch.io/abym</strong></a>. 
           </p>
 
           <p>
@@ -51,10 +51,8 @@ import HeroComp from "@/components/HeroComp.vue";
       </div>
     </section>
 
-    <section id="" class="textimage bg-dark">
+    <section class="textimage bg-dark">
       <div class="container">
-        <!-- <img id="" ref="" class="content-image" src="/perso/"/> -->
-
         <div class="textimage-content">
           <h2>Commandes</h2>
 
@@ -75,8 +73,6 @@ import HeroComp from "@/components/HeroComp.vue";
 
     <section id="" class="textimage">
       <div class="container">
-        <!-- <img class="content-image" src=""/> -->
-
         <div class="textimage-content">
           <h2>L'équipe</h2>
 

@@ -1,6 +1,4 @@
 <script setup>
-import InstaIcon from "@/components/icons/InstaIcon.vue";
-
 defineProps({
   list: Array,
 });

@@ -168,7 +168,6 @@ onBeforeUnmount(() => {
                 display: block;
                 width: 100%;
                 padding: 10px;
-                padding-left: 40px;
                 font-weight: 600;
                 text-align: left;
                 border-radius: 5px;
@@ -184,8 +183,13 @@ onBeforeUnmount(() => {
                     translate: 0 -50%;
                 }
                 
-                &:hover,
+                &:hover{
+                    color: var(--c-primary-light);
+                    padding-left: 40px;
+                }
+                
                 &.active{
+                    padding-left: 40px;
                     color: var(--c-primary-dark);
                     background: var(--c-primary-light);
 

@@ -79,11 +79,11 @@ const equipeWeb = [
             ABYM est un projet de cœur, imaginé par <strong>Enzo</strong>. Lors de sa 1ère année de
             Bachelore au
             <a href="https://www.ynov.com/campus/strasbourg" target="_blank" rel="noopener noreferrer">Ynov Campus de Strasbourg</a>.
-            Il a enfin pu y concrétiser son projet.
+            Il a enfin pu y concrétiser son projet : un jeu d'exploration et d'énigmes, contemplatif, à message écologique.
           </p>
           <p>
             Durant une année, il a été le chef de 8 de ses camarades afin de donner vie au projet ABYM. <br/>
-            En tout, ce sont trois développeurs, trois modélisateurs 3D, un sound-designer qui ont réalisé ce jeu vidéo, ainsi qu'un web designer et une développeuse web qui ont intégré le site vitrine d'ABYM.
+            En tout, ce sont trois game développeurs, trois modélisateurs 3D, un sound-designer qui ont réalisé ce jeu vidéo, ainsi qu'un web designer et une développeuse web qui ont intégré le site vitrine d'ABYM.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ const equipeWeb = [
         </div>
   
         <div class="equpe-web">
-          <h3>Les Externes</h3>
+          <h3>Les Web</h3>
           <EquipeList :list="equipeWeb" />
         </div>
       </section>
