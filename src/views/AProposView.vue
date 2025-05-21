@@ -87,15 +87,7 @@ const equipeWeb = [
           </p>
         </div>
 
-        <div class="content-image">
-          <Objet3D
-            v-bind="{
-              model: '/models/fish.glb',
-              cameraPosition: [4, 0, 2],
-              amplitude: 0.1,
-            }"
-          />
-        </div>
+        <img id="charaHello" class="content-image" src="/perso/CharaHello.gif" alt="Personnage du jeu qui vous dis bonjour"/>
       </div>
     </section>
 

@@ -105,7 +105,7 @@ const initScene = () => {
   scene.add(dirLight2);
   
   if(morelight.value || model.value == "/models/plante_1.fbx"){
-    const dirLight3 = new THREE.DirectionalLight("#ffffff", 5);
+    const dirLight3 = new THREE.DirectionalLight("#ffffff", 6);
     dirLight3.position.set(0, 1, 1);
     scene.add(dirLight3);
   }

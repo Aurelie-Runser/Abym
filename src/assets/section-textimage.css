@@ -66,6 +66,17 @@ section.textimage .container:not(.slider) {
     animation: floating 2s ease-in-out alternate infinite;
 }
 
+#charaHello{
+    animation: floating 1.5s ease-in-out alternate infinite;
+    scale: 1.8;
+}
+
+#charaFall{
+    animation: floating 1.5s ease-in-out alternate infinite, rotate 120s linear infinite;
+    filter: drop-shadow(-5px -10px 5px var(--c-primary-shadow));
+    scale: .9
+}
+
 #fishDescover,
 #fishDescover2{
     scale: 1.4;

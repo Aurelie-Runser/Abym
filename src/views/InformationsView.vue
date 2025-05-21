@@ -25,12 +25,14 @@ import HeroComp from "@/components/HeroComp.vue";
           </p>
         </div>
 
-        <img class="content-image" src="/perso/CharaPoseSwim.webp" alt="personnage du joueur" loading="lazy"/>
+        <img id="charaFall" class="content-image" src="/perso/CharaFall.png" alt="personnage du joueur"/>
       </div>
     </section>
 
     <section id="" class="textimage first-section">
       <div class="container">
+        <img class="content-image" src="/game/niv_tutot.png" alt="capture d'écran du tutoriel de ABYM"/>
+
         <div class="textimage-content">
           <h2>Informations techniques</h2>
 
@@ -46,8 +48,6 @@ import HeroComp from "@/components/HeroComp.vue";
             Ne requiert aucune configuration spécifique.
           </p>
         </div>
-
-        <!-- <img id="" ref="" class="content-image" src="/perso/"/> -->
       </div>
     </section>
 

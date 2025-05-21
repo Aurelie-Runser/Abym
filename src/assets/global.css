@@ -130,6 +130,15 @@ strong{
   }
 }
 
+@keyframes rotate{
+  from{
+    rotate: 0deg;
+  }
+  to{
+    rotate: 360deg;
+  }
+}
+
 .sr-only {
 	border: 0 !important;
 	clip: rect(1px, 1px, 1px, 1px) !important;

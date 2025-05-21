@@ -91,7 +91,7 @@ const plantes = [
           </p>
         </div>
 
-        <img id="fishDescover2" class="content-image" src="/fish/fish_1.webp" alt="Poisson du jeu : Audicyne" loading="lazy"/>
+        <img id="fishDescover2" class="content-image" src="/fish/fish_1.webp" alt="Poisson du jeu : Audicyne"/>
       </div>
 
       <SliderComp
