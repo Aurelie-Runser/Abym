@@ -12,6 +12,14 @@ const sounds = [
         audio:'/musics/people_were_here.wav',
     },
     {
+        name:"Azure Tranquility",
+        audio:'/musics/azure_tranquility.wav',
+    },
+    {
+        name:"Under Water - Cavern",
+        audio:'/musics/underwater_cavern.mp3',
+    },
+    {
         name:"Cri",
         audio:'/musics/cri.wav',
     }
@@ -78,7 +86,7 @@ onBeforeUnmount(() => {
 
 <template>
     <main>
-    <HeroComp title="Juke-Box" text="Musiques et sons, éléments indispensables" />
+    <HeroComp title="Juke-Box" text="Venez écouter la bande son original d'ABYM" />
 
     <div class="container jukebox">
         <h2 class="jokebox-title">Les Musiques d'ABYM</h2>
