@@ -44,7 +44,7 @@ onBeforeUnmount(() => {
             Atterri sur une planète inexplorée, Éclaireur N°67, recru du protocole 51, a pour mission de parcourir ces océans afin de trouver un remède dans l'objectif de sauver son peuple d'une pandémie mortelle.
           </p>
           <p>
-            Les plantes, les animaux, les microbes... tout doit être observé, consigné dans son carnet, pour que lors de son retour chez lui, les scientifiques puissent trouver un vaccin.
+            Les plantes, les animaux, les microbes, tout doit être observé, consigné dans son carnet, pour que lors de son retour chez lui, les scientifiques puissent trouver un vaccin.
           </p>
           <p>
             Vous incarnez Éclaireur N°67, et la survie de cette civilisation dépend de vous.
@@ -69,7 +69,7 @@ onBeforeUnmount(() => {
             Plongez dans cet univers sous-marin à vos risques et périls.
             <br />Dans ces eaux inconnues, tout ce qui bouge n'est pas forcément un allié. Certaines
             créatures fuient, d'autres attaquent sans prévenir. Même les plantes peuvent vous
-            piéger, bloquer votre chemin… ou pire.
+            piéger, bloquer votre chemin, ou pire.
           </p>
           <p>
             Observer, analyser, survivre. <br />À vous de découvrir ce que cache réellement cet

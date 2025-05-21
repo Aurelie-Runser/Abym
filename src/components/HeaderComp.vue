@@ -14,6 +14,7 @@ import Logotext from "@/components/icons/LogoText.vue";
         </li>
         <li><RouterLink class="menu-link" to="/informations">Informations</RouterLink></li>
         <li><RouterLink class="menu-link" to="/encyclopedie">L'Encyclopédie</RouterLink></li>
+        <li><RouterLink class="menu-link" to="/juke-box">Juke-Box</RouterLink></li>
         <li><RouterLink class="menu-link" to="/contact">Contact</RouterLink></li>
       </ul>
     </nav>

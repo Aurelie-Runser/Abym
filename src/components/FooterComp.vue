@@ -15,8 +15,9 @@ import GameCounter from "@/components/GameCounter.vue";
           <p class="footer-title">Navigation</p>
 
           <RouterLink class="footer-link" to="/">Accueil ></RouterLink>
-          <RouterLink class="footer-link" to="/informations">Informations ></RouterLink>
-          <RouterLink class="footer-link" to="/encyclopedie">Découvrir l'encyclopédie ></RouterLink>
+          <RouterLink class="footer-link" to="/informations">Consulter les Informations ></RouterLink>
+          <RouterLink class="footer-link" to="/encyclopedie">Découvrir l'Encyclopédie ></RouterLink>
+          <RouterLink class="footer-link" to="/juke-box">Écouter les Musiques ></RouterLink>
           <RouterLink class="footer-link" to="/a-propos">À-propos ></RouterLink>
         </div>
 

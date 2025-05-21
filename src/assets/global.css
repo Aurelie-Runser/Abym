@@ -119,6 +119,17 @@ strong{
         color: var(--c-primary);
         background: var(--c-primary-light);
     }
+    
+    &.dark{
+        padding: 10px 20px;
+        color: var(--c-primary-dark);
+        background: var(--c-primary-light);
+
+        &:hover{
+            color: var(--c-white);
+            background: var(--c-primary);
+        }
+    }
 }
 
 @keyframes floating{

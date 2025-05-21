@@ -26,6 +26,7 @@ const isMenuOpen = ref(false);
           </li>
           <li><RouterLink class="menu-link" to="/informations" @click="isMenuOpen = false">Informations</RouterLink></li>
           <li><RouterLink class="menu-link" to="/encyclopedie" @click="isMenuOpen = false">L'Encyclopédie</RouterLink></li>
+          <li><RouterLink class="menu-link" to="/juke-box" @click="isMenuOpen = false">Juke-Box</RouterLink></li>
           <li><RouterLink class="menu-link" to="/contact" @click="isMenuOpen = false">Contact</RouterLink></li>
         </ul>
       </nav>
@@ -129,8 +130,8 @@ const isMenuOpen = ref(false);
     }
 
     &.open {
-      width: 200px;
-      height: 350px;
+      width: 180px;
+      height: 370px;
       border-radius: 25px;
 
       .menu-burger {

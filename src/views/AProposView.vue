@@ -79,7 +79,7 @@ const equipeWeb = [
             ABYM est un projet de cœur, imaginé par <strong>Enzo</strong>. Lors de sa 1ère année de
             Bachelore au
             <a href="https://www.ynov.com/campus/strasbourg" target="_blank" rel="noopener noreferrer">Ynov Campus de Strasbourg</a>.
-            Il a enfin pue y concrétiser son projet.
+            Il a enfin pu y concrétiser son projet.
           </p>
           <p>
             Durant une année, il a été le chef de 8 de ses camarades afin de donner vie au projet ABYM. <br/>
