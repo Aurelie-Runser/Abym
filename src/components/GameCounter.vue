@@ -46,13 +46,14 @@ onBeforeUnmount(() => {
 
 <template>
   <div>
-    <p v-if="!isFinished">Jeu disponible dans
+    <!-- <p v-if="!isFinished">Jeu disponible dans
       <br/>
       <span class="countdown-span"><strong>{{ format(countdown.days) }}</strong> jours,</span> <span class="countdown-span"><strong>{{ format(countdown.hours) }}</strong> heures,</span> <span class="countdown-span"><strong>{{ format(countdown.minutes) }}</strong> minutes,</span> <span class="countdown-span"><strong>{{ format(countdown.seconds) }}</strong> secondes</span>
     </p>
     <a v-else href="https://abymgame.itch.io/abym" target="_blank" rel="noopener noreferrer" class="button">
       Télécharger le jeu
-    </a>
+    </a> -->
+    <p>Bientôt disponible...</p>
   </div>
 </template>
 

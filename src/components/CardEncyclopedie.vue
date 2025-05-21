@@ -45,7 +45,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <button
+  <div
     @click="donnees.name && toggleOverlay()"
     class="card"
     :class="[{ 'card-unknown': !donnees.name }]"
@@ -64,7 +64,7 @@ onUnmounted(() => {
       :alt="donnees.name ?? 'silhouette d\'un spécimen'"
       loading="lazy"
     />
-  </button>
+  </div>
 
   <teleport to="body">
     <transition name="fade-zoom">
