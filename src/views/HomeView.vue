@@ -41,16 +41,14 @@ onBeforeUnmount(() => {
           <h2>L'Histoire</h2>
 
           <p>
-            Atterrie sur une planète inexploré, Eclaireur N°67, recrut du protocole 51, a pour
-            mission de parcours ces océans afin de trouver un remède dans l'objectif de sauver son
-            peuple d'une pandémie mortelle.
+            Atterri sur une planète inexplorée, Éclaireur N°67, recru du protocole 51, a pour mission de parcourir ces océans afin de trouver un remède dans l'objectif de sauver son peuple d'une pandémie mortelle.
           </p>
           <p>
-            Les plantes, les animaux, les microbes... tout doit être observé, consigné dans son
-            carnet, pour que lors de son retour chez lui, les scientifiques puisse trouver un
-            vaccin.
+            Les plantes, les animaux, les microbes... tout doit être observé, consigné dans son carnet, pour que lors de son retour chez lui, les scientifiques puissent trouver un vaccin.
           </p>
-          <p>Vous incarner Eclaireur N°67, et la survie de cette civilisation dépend de vous.</p>
+          <p>
+            Vous incarnez Éclaireur N°67, et la survie de cette civilisation dépend de vous.
+          </p>
         </div>
 
         <img
@@ -66,7 +64,7 @@ onBeforeUnmount(() => {
     <section class="textimage bg-dark">
       <div class="container">
         <div class="textimage-content">
-          <h2>Découvrez des créatures térifiantes</h2>
+          <h2>Découvrez des créatures terrifiantes</h2>
           <p>
             Plongez dans cet univers sous-marin à vos risques et périls.
             <br />Dans ces eaux inconnues, tout ce qui bouge n'est pas forcément un allié. Certaines
@@ -103,7 +101,7 @@ onBeforeUnmount(() => {
     <section class="textimage">
       <div class="container">
         <div class="textimage-content">
-          <h2>Retourvez nos réseaux sociaux</h2>
+          <h2>Retrouvez nos réseaux sociaux</h2>
           <p>
             Suivez-nous sur nos réseaux sociaux pour suivre l'avancée du jeu, découvrir des images
             exclusives et ne rien manquer des dernières actualités&nbsp;!

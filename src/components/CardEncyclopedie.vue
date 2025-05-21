@@ -52,7 +52,7 @@ onUnmounted(() => {
   >
     <span class="sr-only">
       <span v-if="donnees.name">Voir les informations sur {{ donnees.name }}</span>
-      <span v-else>Les informations de cet élément sont confidentielles. Pour les connaître, vous devrez jouer à Abym.</span>
+      <span v-else>Les informations de cet élément sont confidentielles. Pour les connaître, vous devrez jouer à ABYM.</span>
     </span>
     <div class="card-content">
       <span class="name">Nom : <strong>{{ donnees.name ?? 'Inconnu' }}</strong></span>
@@ -73,7 +73,7 @@ onUnmounted(() => {
           <div class="card-content">
             <p class="name">{{ donnees.name }} <span>({{ donnees.famille}})</span></p>
             <p class="alot">
-              <span v-if="donnees.categorie">Categorie : <strong>{{ donnees.categorie }}</strong></span>
+              <span v-if="donnees.categorie">Catégorie : <strong>{{ donnees.categorie }}</strong></span>
               <span v-if="donnees.attitude">Dangerosité : <strong>{{ donnees.attitude }}</strong></span>
               <span>Habitat : <strong>{{ donnees.biome }}</strong></span>
             </p>

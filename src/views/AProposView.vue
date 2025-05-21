@@ -76,14 +76,14 @@ const equipeWeb = [
           <h2>Les Origines du projet ABYM</h2>
 
           <p>
-            Abym est un projet de coeur, imaginé par <strong>Enzo</strong>. Lors de sa 1ère année de
+            ABYM est un projet de cœur, imaginé par <strong>Enzo</strong>. Lors de sa 1ère année de
             Bachelore au
             <a href="https://www.ynov.com/campus/strasbourg" target="_blank" rel="noopener noreferrer">Ynov Campus de Strasbourg</a>.
             Il a enfin pue y concrétiser son projet.
           </p>
           <p>
-            Durant une année, il a été le chefs de 8 de ses camarades afin de donner vie au projet Abym. <br/>
-            En tout, ce sont trois développeurs, trois modélisateurs 3D, un sound-designer qui ont réalisé ce jeu vidéo, ainsi qu'un web designer et une développeuse web qui ont intégré le site vitrine d'Abym.
+            Durant une année, il a été le chef de 8 de ses camarades afin de donner vie au projet ABYM. <br/>
+            En tout, ce sont trois développeurs, trois modélisateurs 3D, un sound-designer qui ont réalisé ce jeu vidéo, ainsi qu'un web designer et une développeuse web qui ont intégré le site vitrine d'ABYM.
           </p>
         </div>
 
