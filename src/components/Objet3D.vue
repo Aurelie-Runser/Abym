@@ -25,10 +25,13 @@ import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 const props = defineProps({
   model: String,
   cameraPosition: Array,
-  amplitude: Number,
+  morelight: Boolean
 });
 
-const { model, cameraPosition, amplitude } = toRefs(props);
+
+
+const { model, cameraPosition, morelight } = toRefs(props);
+console.log(morelight.value)
 const emit = defineEmits(["loaded"]);
 
 const canvasContainer = ref(null);
@@ -93,10 +96,19 @@ const initScene = () => {
     (err) => console.error("Erreur de chargement FBX :", err)
   );
 
-  scene.add(new THREE.AmbientLight("#70C5D4", 0.9));
-  const dirLight = new THREE.DirectionalLight("#e9e9e9", 0.9);
+  scene.add(new THREE.AmbientLight("#70C5D4", 2));
+  const dirLight = new THREE.DirectionalLight("#70C5D4", 3);
   dirLight.position.set(0, 1, 1);
   scene.add(dirLight);
+  const dirLight2 = new THREE.DirectionalLight("#e9e9e9", 1.5);
+  dirLight2.position.set(0, 1, 1);
+  scene.add(dirLight2);
+  
+  if(morelight.value || model.value == "/models/plante_1.fbx"){
+    const dirLight3 = new THREE.DirectionalLight("#ffffff", 5);
+    dirLight3.position.set(0, 1, 1);
+    scene.add(dirLight3);
+  }
 
   animate();
 };

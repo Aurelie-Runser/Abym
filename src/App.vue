@@ -6,6 +6,8 @@ import HeaderMobilComp from "@/components/HeaderMobilComp.vue";
 import HeaderComp from "@/components/HeaderComp.vue";
 import FooterComp from "@/components/FooterComp.vue";
 
+const isPres = ref(localStorage.getItem('isPres') === 'true');
+
 const route = useRoute()
 
 // permet de jouer l'animation de fondu avant de changer de vue
@@ -84,6 +86,8 @@ onUnmounted(() => {
     </RouterView>
     
     <FooterComp />
+
+    <img v-if="isPres" src="/qrcode.webp" alt="QRCode pour accéder au site" class="qr-code">
   </div>
 </template>
 
@@ -112,5 +116,14 @@ main{
 
 .grow-out-enter-active, .grow-out-leave-active {
   transition: all 0.5s ease;
+}
+
+.qr-code{
+  position: fixed;
+  z-index: 30;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  height: auto;
 }
 </style>
